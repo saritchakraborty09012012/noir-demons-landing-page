@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" fill="none">
+  <rect width="180" height="180" fill="#050505"/>
+  <g font-family="Georgia, 'Times New Roman', serif">
+    <text x="55" y="102" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2">N</text>
+    <text x="102" y="102" font-size="76" font-weight="400" fill="#aaa" letter-spacing="-2">D</text>
+  </g>
+  <circle cx="90" cy="90" r="80" stroke="#888" stroke-width="1.5" fill="none" opacity=".55"/>
+  <text x="90" y="128" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" letter-spacing="3" fill="#888">NOIRDEMONS</text>
+</svg>
