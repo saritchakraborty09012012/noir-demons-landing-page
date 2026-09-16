@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'NoirDemons — Make the impossible useful',
   description: 'NoirDemons builds intelligent systems for ideas, finance, analytics, education, and the future of development.',
   generator: 'NoirDemons',
+  verification: {
+    google: 'eR1-y-o7eXGMskKYVWwEvKGatkNGdUM5sdrGeDAisjg',
+  },
   icons: {
     icon: [
       {
