@@ -73,7 +73,9 @@ a { text-decoration: none; }
   box-shadow: 0 10px 40px rgba(0,0,0,.22), inset 0 -1px 0 rgba(255,255,255,.035);
 }
 
-.brand, .footer-brand { display: flex; align-items: center; gap: 11px; background: none; font-size: 12px; letter-spacing: .18em; font-weight: 700; }
+.brand, .footer-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; background: none; }
+.brand-row { display: flex; align-items: center; gap: 11px; font-size: 12px; letter-spacing: .18em; font-weight: 700; }
+.brand-tagline { font-size: 8px; letter-spacing: .12em; text-transform: uppercase; color: #6b6b67; padding-left: 38px; white-space: nowrap; }
 .brand-light { font-weight: 300; color: #aaa; }
 .brand-logo { width: 27px; height: 27px; object-fit: cover; object-position: center; border-radius: 50%; border: 1px solid #888; filter: grayscale(1); box-shadow: 0 0 18px rgba(255,255,255,.12); }
 .nav-links { display: flex; gap: 35px; margin-left: 100px; }

@@ -2,12 +2,88 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
+const SITE_URL = 'https://noir-demons-landing-page.vercel.app'
+const SITE_NAME = 'NoirDemons'
+const TAGLINE = 'formerly Novexa'
+const DEFAULT_TITLE = 'NoirDemons — Make the impossible useful | formerly Novexa'
+const DEFAULT_DESCRIPTION =
+  'NoirDemons (formerly Novexa) builds intelligent systems for ideas, finance, analytics, education, and the future of development. Make the impossible useful.'
+
 export const metadata: Metadata = {
-  title: 'NoirDemons — Make the impossible useful',
-  description: 'NoirDemons builds intelligent systems for ideas, finance, analytics, education, and the future of development.',
-  generator: 'NoirDemons',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s — ${SITE_NAME} | ${TAGLINE}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  generator: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: 'technology',
+  keywords: [
+    'NoirDemons',
+    'Novexa',
+    'AI development studio',
+    'idea validation',
+    'EconoMind AI',
+    'BlitzData',
+    'Solve NCERT',
+    'Novexis',
+    'software studio India',
+    'custom web applications',
+    'business analytics',
+    'AI native development',
+  ],
   verification: {
     google: 'eR1-y-o7eXGMskKYVWwEvKGatkNGdUM5sdrGeDAisjg',
+  },
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: '/',
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: '/images/noirdemons.png',
+        width: 1024,
+        height: 1024,
+        alt: 'NoirDemons logo — formerly Novexa',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ['/images/noirdemons.png'],
+  },
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  appleWebApp: {
+    capable: true,
+    title: SITE_NAME,
+    statusBarStyle: 'black-translucent',
   },
   icons: {
     icon: [
@@ -28,8 +104,30 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#050505' },
+  ],
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  alternateName: 'Novexa',
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/noirdemons.png`,
+  image: `${SITE_URL}/images/noirdemons.png`,
+  email: 'support.noirdemons@puszao.resend.app',
+  description: DEFAULT_DESCRIPTION,
+  foundingDate: '2026',
+  areaServed: 'IN',
+  knowsAbout: [
+    'AI development',
+    'Idea validation',
+    'Finance intelligence',
+    'Business analytics',
+    'Education technology',
+    'Custom software development',
   ],
 }
 
@@ -41,6 +139,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

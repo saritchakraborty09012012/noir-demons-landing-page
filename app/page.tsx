@@ -345,8 +345,11 @@ export default function Page() {
       <div className="noise" aria-hidden="true" />
       <nav className="nav-wrap" aria-label="Primary navigation">
         <button className="brand" onClick={() => scrollTo('top')} aria-label="NoirDemons home">
-          <img className="brand-logo" src="/images/noirdemons.png" alt="NoirDemons logo" />
-          <span>NOIR<span className="brand-light">DEMONS</span></span>
+          <span className="brand-row">
+            <img className="brand-logo" src="/images/noirdemons.png" alt="NoirDemons logo" />
+            <span>NOIR<span className="brand-light">DEMONS</span></span>
+          </span>
+          <span className="brand-tagline">formerly Novexa</span>
         </button>
         <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
           <button onClick={() => scrollTo('ecosystem')}>Ecosystem</button>
@@ -414,7 +417,13 @@ export default function Page() {
       <span id="contact-boundary" className="contact-boundary" aria-hidden="true" />
       <section className="contact-section section-pad" id="contact"><div className="contact-orbit" aria-hidden="true"><div /><div /><div /></div><div className="contact-content"><p className="eyebrow">A new signal is forming</p><h2>Have a difficult<br /><em>problem?</em></h2><a className="contact-button" href="mailto:support.noirdemons@puszao.resend.app">Let&apos;s talk <Mail size={17} /></a></div></section>
 
-      <footer className="footer"><div className="footer-brand"><img className="brand-logo" src="/images/noirdemons.png" alt="NoirDemons logo" /><span>NOIR<span className="brand-light">DEMONS</span></span></div><p>Building intelligent tools for innovation,<br />finance, analytics, and education.</p><div className="footer-right"><span>© 2026 NoirDemons</span><a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a></div></footer>
+      <footer className="footer"><div className="footer-brand">
+          <span className="brand-row">
+            <img className="brand-logo" src="/images/noirdemons.png" alt="NoirDemons logo" />
+            <span>NOIR<span className="brand-light">DEMONS</span></span>
+          </span>
+          <span className="brand-tagline">formerly Novexa</span>
+        </div><p>Building intelligent tools for innovation,<br />finance, analytics, and education.</p><div className="footer-right"><span>© 2026 NoirDemons</span><a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a></div></footer>
     </main>
   )
 }
