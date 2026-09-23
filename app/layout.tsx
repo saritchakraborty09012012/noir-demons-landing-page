@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
-const SITE_URL = 'https://noir-demons-landing-page.vercel.app'
+const SITE_URL = 'https://noir-demons.vercel.app'
 const SITE_NAME = 'NoirDemons'
 const TAGLINE = 'formerly Novexa'
 const DEFAULT_TITLE = 'NoirDemons — Make the impossible useful | formerly Novexa'
