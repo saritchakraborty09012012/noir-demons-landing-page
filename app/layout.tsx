@@ -4,11 +4,11 @@ import './globals.css'
 
 const SITE_URL = 'https://noir-demons.vercel.app'
 const SITE_NAME = 'NoirDemons'
-const SHORT_NAME = 'NDe'
+const SHORT_NAME = 'NDE'
 const TAGLINE = 'formerly Novexa'
-const DEFAULT_TITLE = 'NDe — NoirDemons | Make the impossible useful | formerly Novexa'
+const DEFAULT_TITLE = 'NDE — NoirDemons | Make the impossible useful | formerly Novexa'
 const DEFAULT_DESCRIPTION =
-  'NDe (NoirDemons), formerly Novexa, builds intelligent systems for ideas, finance, analytics, education, and the future of development. Make the impossible useful.'
+  'NDE (NoirDemons), formerly Novexa, builds intelligent systems for ideas, finance, analytics, education, and the future of development. Make the impossible useful.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   publisher: `${SHORT_NAME} — ${SITE_NAME}`,
   category: 'technology',
   keywords: [
-    'NDe',
     'NDE',
+    'NDe',
     'nDE',
     'NdE',
     'nde',
     'NoirDemons',
     'Noir Demons',
-    'NDe NoirDemons',
+    'NDE NoirDemons',
     'Novexa',
     'AI development studio',
     'idea validation',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
         url: '/images/noirdemons.png',
         width: 1024,
         height: 1024,
-        alt: 'NDe — NoirDemons logo (formerly Novexa)',
+        alt: 'NDE — NoirDemons logo (formerly Novexa)',
       },
     ],
   },
@@ -118,13 +118,13 @@ export const viewport: Viewport = {
 }
 
 const BRAND_ALTERNATES = [
-  'NDe',
   'NDE',
+  'NDe',
   'nDE',
   'NdE',
   'nde',
   'Noir Demons',
-  'NDe NoirDemons',
+  'NDE NoirDemons',
   'Novexa',
 ]
 
