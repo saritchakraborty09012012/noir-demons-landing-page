@@ -4,26 +4,34 @@ import './globals.css'
 
 const SITE_URL = 'https://noir-demons.vercel.app'
 const SITE_NAME = 'NoirDemons'
+const SHORT_NAME = 'NDe'
 const TAGLINE = 'formerly Novexa'
-const DEFAULT_TITLE = 'NoirDemons — Make the impossible useful | formerly Novexa'
+const DEFAULT_TITLE = 'NDe — NoirDemons | Make the impossible useful | formerly Novexa'
 const DEFAULT_DESCRIPTION =
-  'NoirDemons (formerly Novexa) builds intelligent systems for ideas, finance, analytics, education, and the future of development. Make the impossible useful.'
+  'NDe (NoirDemons), formerly Novexa, builds intelligent systems for ideas, finance, analytics, education, and the future of development. Make the impossible useful.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: `%s — ${SITE_NAME} | ${TAGLINE}`,
+    template: `%s — ${SHORT_NAME} ${SITE_NAME} | ${TAGLINE}`,
   },
   description: DEFAULT_DESCRIPTION,
-  applicationName: SITE_NAME,
+  applicationName: `${SHORT_NAME} — ${SITE_NAME}`,
   generator: SITE_NAME,
-  authors: [{ name: SITE_NAME, url: SITE_URL }],
-  creator: SITE_NAME,
-  publisher: SITE_NAME,
+  authors: [{ name: `${SHORT_NAME} (${SITE_NAME})`, url: SITE_URL }],
+  creator: `${SHORT_NAME} — ${SITE_NAME}`,
+  publisher: `${SHORT_NAME} — ${SITE_NAME}`,
   category: 'technology',
   keywords: [
+    'NDe',
+    'NDE',
+    'nDE',
+    'NdE',
+    'nde',
     'NoirDemons',
+    'Noir Demons',
+    'NDe NoirDemons',
     'Novexa',
     'AI development studio',
     'idea validation',
@@ -57,7 +65,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: '/',
-    siteName: SITE_NAME,
+    siteName: `${SHORT_NAME} · ${SITE_NAME}`,
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     images: [
@@ -65,7 +73,7 @@ export const metadata: Metadata = {
         url: '/images/noirdemons.png',
         width: 1024,
         height: 1024,
-        alt: 'NoirDemons logo — formerly Novexa',
+        alt: 'NDe — NoirDemons logo (formerly Novexa)',
       },
     ],
   },
@@ -82,7 +90,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: SITE_NAME,
+    title: `${SHORT_NAME} — ${SITE_NAME}`,
     statusBarStyle: 'black-translucent',
   },
   icons: {
@@ -109,11 +117,23 @@ export const viewport: Viewport = {
   ],
 }
 
+const BRAND_ALTERNATES = [
+  'NDe',
+  'NDE',
+  'nDE',
+  'NdE',
+  'nde',
+  'Noir Demons',
+  'NDe NoirDemons',
+  'Novexa',
+]
+
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
-  alternateName: 'Novexa',
+  alternateName: BRAND_ALTERNATES,
   url: SITE_URL,
   logo: `${SITE_URL}/images/noirdemons.png`,
   image: `${SITE_URL}/images/noirdemons.png`,
@@ -131,6 +151,17 @@ const organizationJsonLd = {
   ],
 }
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: `${SHORT_NAME} — ${SITE_NAME}`,
+  alternateName: BRAND_ALTERNATES,
+  url: SITE_URL,
+  description: DEFAULT_DESCRIPTION,
+  inLanguage: 'en-IN',
+  publisher: { '@id': `${SITE_URL}/#organization` },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -142,6 +173,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

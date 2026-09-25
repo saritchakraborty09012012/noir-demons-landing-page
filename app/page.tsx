@@ -18,7 +18,7 @@ const plans = [
   { number: '04', name: 'Custom', price: 'Let’s discuss', caption: 'For large systems, SaaS products, and specialized software.', features: ['Institutional systems', 'Startup MVPs', 'Custom SaaS products', 'Highly specialized software', 'Complex requirements', 'Long-term development partnership'], action: 'Discuss your vision' },
 ]
 
-const planEmail = (plan: string) => `mailto:support.noirdemons@puszao.resend.app?subject=${encodeURIComponent(`NoirDemons ${plan} plan enquiry`)}&body=${encodeURIComponent(`Hello NoirDemons team,\n\nI am interested in the ${plan} plan.\n\nKindly mention your Custom Features:\n\n`)}`
+const planEmail = (plan: string) => `mailto:support.noirdemons@puszao.resend.app?subject=${encodeURIComponent(`NDe NoirDemons ${plan} plan enquiry`)}&body=${encodeURIComponent(`Hello NDe (NoirDemons) team,\n\nI am interested in the ${plan} plan.\n\nKindly mention your Custom Features:\n\n`)}`
 
 
 const GALAXY_STARS = 2600
@@ -137,8 +137,12 @@ function GalaxyField() {
       // when it is reconstructed from a finite number of stars.
       octx.lineWidth = 3
       octx.strokeStyle = '#fff'
-      octx.strokeText('NoirDemons', ow / 2, oh / 2 + 4)
-      octx.fillText('NoirDemons', ow / 2, oh / 2 + 4)
+      octx.font = '900 96px Algerian, "Arial Black", Georgia, serif'
+      octx.strokeText('NDe', ow / 2, 66)
+      octx.fillText('NDe', ow / 2, 66)
+      octx.font = '900 205px Algerian, "Arial Black", Georgia, serif'
+      octx.strokeText('NoirDemons', ow / 2, oh / 2 + 62)
+      octx.fillText('NoirDemons', ow / 2, oh / 2 + 62)
 
       const pixels = octx.getImageData(0, 0, ow, oh).data
       const candidates: Array<{ x: number; y: number }> = []
@@ -344,10 +348,13 @@ export default function Page() {
       <GalaxyField />
       <div className="noise" aria-hidden="true" />
       <nav className="nav-wrap" aria-label="Primary navigation">
-        <button className="brand" onClick={() => scrollTo('top')} aria-label="NoirDemons home">
+        <button className="brand" onClick={() => scrollTo('top')} aria-label="NDe — NoirDemons home">
           <span className="brand-row">
-            <img className="brand-logo" src="/images/noirdemons.png" alt="NoirDemons logo" />
-            <span>NOIR<span className="brand-light">DEMONS</span></span>
+            <img className="brand-logo" src="/images/noirdemons.png" alt="NDe — NoirDemons logo" />
+            <span className="brand-names">
+              <span className="brand-short">NDe</span>
+              <span className="brand-full">NOIR<span className="brand-light">DEMONS</span></span>
+            </span>
           </span>
           <span className="brand-tagline">formerly Novexa</span>
         </button>
@@ -366,7 +373,7 @@ export default function Page() {
         <div className="hero-copy">
           <p className="eyebrow"><span className="status-dot" /> Independent intelligence studio / 001</p>
           <h1>Make the<br /><em>impossible</em><br />useful.</h1>
-          <p className="hero-intro">NoirDemons builds intelligent systems for the moments that matter — when an idea needs direction, data needs meaning, and ambition needs a way forward.</p>
+          <p className="hero-intro">NDe (NoirDemons) builds intelligent systems for the moments that matter — when an idea needs direction, data needs meaning, and ambition needs a way forward.</p>
           <div className="hero-actions">
             <button className="primary-cta" onClick={() => scrollTo('ecosystem')}>Explore the ecosystem <MoveUpRight size={17} /></button>
             <button className="text-cta" onClick={() => scrollTo('plans')}>View custom plans <ChevronDown size={16} /></button>
@@ -379,7 +386,7 @@ export default function Page() {
           <div className="crosshair crosshair-a"><Crosshair size={15} /></div><div className="crosshair crosshair-b"><Crosshair size={12} /></div>
         </div>
         <div className="scroll-cue"><span>Scroll to enter</span><div className="scroll-line" /></div>
-        <div className="hero-index">NOIRDEMONS / <span>01—05</span></div>
+        <div className="hero-index">NDE — NOIRDEMONS / <span>01—05</span></div>
       </section>
 
       <section className="manifesto section-pad" id="vision">
@@ -395,18 +402,18 @@ export default function Page() {
         <div className="section-kicker"><span>( B )</span><span>THE ECOSYSTEM</span><span>SELECT A SIGNAL</span></div>
         <div className="ecosystem-heading"><h2>Five ways to<br /><em>move forward.</em></h2><p>One studio. An expanding constellation of products designed to make difficult things feel possible.</p></div>
         <div className="product-stage">
-          <div className="product-list" role="tablist" aria-label="NoirDemons products">
+          <div className="product-list" role="tablist" aria-label="NDe — NoirDemons products">
             {products.map((product, index) => <button key={product.name} className={`product-tab ${activeProduct === index ? 'active' : ''}`} onClick={() => setActiveProduct(index)} role="tab" aria-selected={activeProduct === index}><span>{product.number}</span><span>{product.name}</span><span className="tab-arrow" onClick={(e) => { if (!product.soon) { e.stopPropagation(); window.open(product.url, '_blank', 'noopener,noreferrer'); } }}>{product.soon ? 'SOON' : <ArrowUpRight size={17} />}</span></button>)}
           </div>
           <div className="product-card" key={products[activeProduct].name}>
-            <div className="card-top"><span>NOIRDEMONS / PRODUCT {products[activeProduct].number}</span><span>{products[activeProduct].category}</span></div>
+            <div className="card-top"><span>NDE · NOIRDEMONS / PRODUCT {products[activeProduct].number}</span><span>{products[activeProduct].category}</span></div>
             <div className="card-mark"><span>{products[activeProduct].mark}</span><div className="mark-lines" /></div>
             <div className="card-bottom"><h3>{products[activeProduct].name}</h3><p>{products[activeProduct].description}</p>{products[activeProduct].soon ? <span className="soon-label">In the making / Join the signal</span> : <a href={products[activeProduct].url} target="_blank" rel="noreferrer" className="card-link">Open product <ArrowUpRight size={18} /></a>}</div>
           </div>
         </div>
       </section>
 
-      <section className="signal-band" aria-label="NoirDemons capabilities"><div className="signal-track"><span>IDEAS → OPPORTUNITIES</span><Sparkles size={19} /><span>DATA → DECISIONS</span><Sparkles size={19} /><span>KNOWLEDGE → ACTION</span><Sparkles size={19} /><span>IDEAS → OPPORTUNITIES</span><Sparkles size={19} /></div></section>
+      <section className="signal-band" aria-label="NDe — NoirDemons capabilities"><div className="signal-track"><span>IDEAS → OPPORTUNITIES</span><Sparkles size={19} /><span>DATA → DECISIONS</span><Sparkles size={19} /><span>KNOWLEDGE → ACTION</span><Sparkles size={19} /><span>IDEAS → OPPORTUNITIES</span><Sparkles size={19} /></div></section>
 
       <section className="plans section-pad" id="plans">
         <div className="section-kicker"><span>( C )</span><span>THE BUILD STUDIO</span><span>IDEA → DEPLOYMENT</span></div>
@@ -419,11 +426,14 @@ export default function Page() {
 
       <footer className="footer"><div className="footer-brand">
           <span className="brand-row">
-            <img className="brand-logo" src="/images/noirdemons.png" alt="NoirDemons logo" />
-            <span>NOIR<span className="brand-light">DEMONS</span></span>
+            <img className="brand-logo" src="/images/noirdemons.png" alt="NDe — NoirDemons logo" />
+            <span className="brand-names">
+              <span className="brand-short">NDe</span>
+              <span className="brand-full">NOIR<span className="brand-light">DEMONS</span></span>
+            </span>
           </span>
           <span className="brand-tagline">formerly Novexa</span>
-        </div><p>Building intelligent tools for innovation,<br />finance, analytics, and education.</p><div className="footer-right"><span>© 2026 NoirDemons</span><a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a></div></footer>
+        </div><p>Building intelligent tools for innovation,<br />finance, analytics, and education.</p><div className="footer-right"><span>© 2026 NDe · NoirDemons</span><a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a></div></footer>
     </main>
   )
 }
