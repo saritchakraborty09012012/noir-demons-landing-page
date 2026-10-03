@@ -11,14 +11,60 @@ const products = [
   { number: '05', name: 'Novexis', category: 'AI-native development', description: 'A new environment for thinking, building, and shipping with intelligent agents.', url: '#', mark: 'NV', soon: true },
 ]
 
-const plans = [
+const saasPlans = [
   { number: '01', name: 'Starter', price: '±₹5,000 · negotiable', caption: 'For institutions and small businesses ready to launch.', features: ['Basic website or web app', 'Forms, dashboards, and CRUD flows', 'Basic database integration', 'Responsive custom UI/UX', 'Deployment and setup'], action: 'Start your build' },
   { number: '02', name: 'Business', price: '±₹10,000 · negotiable', caption: 'For teams that need a dependable digital operation.', features: ['Advanced business applications', 'Authentication and user roles', 'Admin dashboards', 'Database and API integrations', 'Automated workflows', 'Deployment and configuration'], action: 'Plan my application' },
   { number: '03', name: 'Pro', price: '±₹20,000 · negotiable', caption: 'For ambitious products with real operational complexity.', features: ['Full-featured custom applications', 'Complex dashboards and management systems', 'Advanced integrations and automation', 'Multiple user roles', 'Payments, notifications, and third-party services', 'Production deployment'], action: 'Build something serious' },
   { number: '04', name: 'Custom', price: 'Let’s discuss', caption: 'For large systems, SaaS products, and specialized software.', features: ['Institutional systems', 'Startup MVPs', 'Custom SaaS products', 'Highly specialized software', 'Complex requirements', 'Long-term development partnership'], action: 'Discuss your vision' },
 ]
 
-const planEmail = (plan: string) => `mailto:support.noirdemons@puszao.resend.app?subject=${encodeURIComponent(`NDE NoirDemons ${plan} plan enquiry`)}&body=${encodeURIComponent(`Hello NDE (NoirDemons) team,\n\nI am interested in the ${plan} plan.\n\nKindly mention your Custom Features:\n\n`)}`
+const licensePlans = [
+  { number: '01', name: 'Starter', price: '₹10,000 · one-time', caption: 'A polished presence you own outright — code included.', features: ['Full source code handover', 'Business website or landing system', 'Forms, dashboards, and CRUD flows', 'Database integration', 'Deployed to your hosting', 'Handover session & documentation'], action: 'Own your starter' },
+  { number: '02', name: 'Business', price: '₹20,000 · one-time', caption: 'A working operation that runs on your servers, not ours.', features: ['Advanced business applications', 'Authentication and user roles', 'Admin dashboards', 'Database and API integrations', 'Deployed to your infrastructure', '30 days of post-launch support'], action: 'Claim the build' },
+  { number: '03', name: 'Pro', price: '₹30,000 · one-time', caption: 'Serious software, delivered with the keys in your hand.', features: ['Full-featured custom applications', 'Complex dashboards and management systems', 'Advanced integrations and automation', 'Payments, notifications, and third-party services', 'Complete source & build pipeline', '60 days of post-launch support'], action: 'Take it all' },
+  { number: '04', name: 'Custom', price: 'Let’s discuss', caption: 'For large systems and products with specialised ownership terms.', features: ['Institutional systems', 'Startup MVPs', 'Custom SaaS products', 'Source & IP terms agreed up front', 'Long-term development partnership', 'Optional managed handover'], action: 'Discuss your vision' },
+]
+
+const engagementModels = [
+  {
+    index: '01 · BUY THE BUILD',
+    meta: 'ONE-TIME',
+    title: 'Own the source.',
+    copy: 'You purchase the software and every line behind it. We design it, build it, ship it, then hand over the keys — it is yours to host, edit, scale and resell, with no one holding the licence.',
+    priceLabel: 'Starts at',
+    price: '₹10,000 · one-time',
+    points: ['You own the source code outright', 'One-time payment, nothing recurring', 'Host it on any server you choose', 'Full control · full responsibility'],
+    featured: false,
+  },
+  {
+    index: '02 · MANAGED SERVICE',
+    meta: 'RECURRING',
+    title: 'Run it with us.',
+    copy: 'We keep the infrastructure, databases, updates and fixes on our plate while you keep serving customers. The product quietly gets better every month — without a single ticket landing on your desk.',
+    priceLabel: 'Starts at',
+    price: '₹5,000 · recurring',
+    points: ['We run the infrastructure for you', 'Updates and bug fixes included', 'New features roll straight into your plan', 'Predictable recurring plan · easy to scale'],
+    featured: true,
+  },
+]
+
+const comparisonRows = [
+  { label: 'Source code', license: 'Yours — full handover', saas: 'Maintained by our team' },
+  { label: 'Hosting', license: 'Your servers', saas: 'Our team' },
+  { label: 'Database infrastructure', license: 'You run it', saas: 'We run it' },
+  { label: 'Customer data', license: 'Yours, always', saas: 'Yours, always' },
+  { label: 'Updates', license: 'Quoted per change', saas: 'Continuous and included' },
+  { label: 'Bug fixes', license: 'Separate contract', saas: 'Handled by our team' },
+  { label: 'New features', license: 'Scoped separately', saas: 'Roll into your plan' },
+  { label: 'Recurring payments', license: 'None', saas: 'Yes — one simple plan' },
+  { label: 'Customer independence', license: 'High', saas: 'Lower' },
+  { label: 'Your control', license: 'Higher', saas: 'Lower' },
+  { label: 'Your responsibility', license: 'Higher', saas: 'Lower' },
+  { label: 'Scalability', license: 'Harder', saas: 'Much easier' },
+  { label: 'Backend', license: 'You own and control it', saas: 'We run it — you steer it' },
+]
+
+const planEmail = (plan: string, mode: 'saas' | 'license') => `mailto:support.noirdemons@puszao.resend.app?subject=${encodeURIComponent(`NDE NoirDemons ${mode === 'saas' ? 'SaaS' : 'Source-code'} ${plan} plan enquiry`)}&body=${encodeURIComponent(`Hello NDE (NoirDemons) team,\n\nI am interested in the ${plan} plan (${mode === 'saas' ? 'managed service / SaaS' : 'one-time source code purchase'}).\n\nKindly mention your Custom Features:\n\n`)}`
 
 
 const GALAXY_STARS = 2600
@@ -174,7 +220,7 @@ function GalaxyField() {
     }
 
     const getBoundaryState = () => {
-      const ids = ['vision', 'ecosystem', 'plans', 'contact-boundary']
+      const ids = ['vision', 'ecosystem', 'services', 'plans', 'contact-boundary']
       const scrollY = window.scrollY || window.pageYOffset
       let best = { intensity: 0, index: 0, progress: 0 }
 
@@ -337,6 +383,8 @@ export default function Page() {
 
   const [activeProduct, setActiveProduct] = useState(0)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [planMode, setPlanMode] = useState<'saas' | 'license'>('saas')
+  const activePlans = planMode === 'saas' ? saasPlans : licensePlans
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -360,6 +408,7 @@ export default function Page() {
         </button>
         <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
           <button onClick={() => scrollTo('ecosystem')}>Ecosystem</button>
+          <button onClick={() => scrollTo('services')}>Services</button>
           <button onClick={() => scrollTo('plans')}>Plans</button>
           <button onClick={() => scrollTo('vision')}>Our vision</button>
           <a href="mailto:support.noirdemons@puszao.resend.app">Contact</a>
@@ -415,10 +464,66 @@ export default function Page() {
 
       <section className="signal-band" aria-label="NDE — NoirDemons capabilities"><div className="signal-track"><span>IDEAS → OPPORTUNITIES</span><Sparkles size={19} /><span>DATA → DECISIONS</span><Sparkles size={19} /><span>KNOWLEDGE → ACTION</span><Sparkles size={19} /><span>IDEAS → OPPORTUNITIES</span><Sparkles size={19} /></div></section>
 
+      <section className="engagement section-pad" id="services">
+        <div className="section-kicker"><span>( C )</span><span>WAYS TO WORK WITH US</span><span>OWN IT / OR OPERATE IT</span></div>
+        <div className="engagement-head">
+          <div>
+            <p className="eyebrow"><span className="status-dot" /> Two partnerships, one standard</p>
+            <h2>Take the keys,<br /><em>or let us drive.</em></h2>
+          </div>
+          <p>Some teams want the machine — every line of code, every server, every decision. Others want the outcome without the upkeep. Choose how much sits on your plate, and we build the rest around it.</p>
+        </div>
+        <div className="model-grid">
+          {engagementModels.map((model) => (
+            <article className={`model-card ${model.featured ? 'is-featured' : ''}`} key={model.title}>
+              <div className="model-index"><span>{model.index}</span><span className={model.featured ? 'model-badge' : 'model-meta'}>{model.featured ? 'RECOMMENDED' : model.meta}</span></div>
+              <h3>{model.title}</h3>
+              <p>{model.copy}</p>
+              <div className="model-price"><span>{model.priceLabel}</span><strong>{model.price}</strong></div>
+              <ul className="model-points">{model.points.map((point) => <li key={point}>{point}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+        <div className="compare-head">
+          <h3>Side by side — <em>no fine print.</em></h3>
+          <span><span className="only-wide">13 DECISION POINTS / PLAIN LANGUAGE</span><span className="only-narrow">SWIPE TO COMPARE →</span></span>
+        </div>
+        <div className="compare-wrap">
+          <div className="compare-scroll">
+            <table className="compare">
+              <thead>
+                <tr>
+                  <th>What changes</th>
+                  <th className="col-license">Buy the software &amp; source code</th>
+                  <th className="col-saas">Run it as our service <span className="compare-pill">Recommended</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row) => (
+                  <tr key={row.label}>
+                    <th className="row-label" scope="row">{row.label}</th>
+                    <td className="col-license">{row.license}</td>
+                    <td className="col-saas">{row.saas}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="compare-foot"><span>NDE — NOIRDEMONS / ENGAGEMENT MATRIX</span><span>NO HIDDEN TERMS · NO SURPRISES</span></div>
+        </div>
+      </section>
+
       <section className="plans section-pad" id="plans">
-        <div className="section-kicker"><span>( C )</span><span>THE BUILD STUDIO</span><span>IDEA → DEPLOYMENT</span></div>
+        <div className="section-kicker"><span>( D )</span><span>THE BUILD STUDIO</span><span>IDEA → DEPLOYMENT</span></div>
         <div className="plans-intro"><div><p className="eyebrow"><span className="status-dot" /> Trusted makers for ambitious teams</p><h2>Bring your business<br /><em>online, properly.</em></h2></div><p>One of the most trusted software creation studios is now here to help industries move forward. Get a custom application for your business in just a few days — thoughtfully designed, expertly built, and ready to grow.</p></div>
-        <div className="plans-grid">{plans.map((plan) => <article className="plan-card" key={plan.name}><div className="plan-top"><span>{plan.number}</span><span>NEGOTIABLE BY SCOPE</span></div><h3>{plan.name}</h3><p className="plan-price">{plan.price}</p><p className="plan-caption">{plan.caption}</p><ul>{plan.features.map((feature) => <li key={feature}>{feature}</li>)}</ul><a className="plan-action" href={planEmail(plan.name)}>{plan.action} <ArrowUpRight size={16} /></a></article>)}</div>
+        <div className="plans-controls">
+          <div className="plans-switch" role="tablist" aria-label="Choose how to work with NDE — NoirDemons">
+            <button role="tab" aria-selected={planMode === 'saas'} className={planMode === 'saas' ? 'active' : ''} onClick={() => setPlanMode('saas')}>Run it as a service <span className="switch-tag">Popular</span></button>
+            <button role="tab" aria-selected={planMode === 'license'} className={planMode === 'license' ? 'active' : ''} onClick={() => setPlanMode('license')}>Own the source code</button>
+          </div>
+          <p className="plans-mode-note">{planMode === 'saas' ? 'Hosted, patched and updated by us — you focus on customers, we handle the machinery. What most teams choose.' : 'Built, delivered and handed over to you — one payment, total ownership, hosting on your terms.'}</p>
+        </div>
+        <div className="plans-grid" key={planMode}>{activePlans.map((plan) => <article className="plan-card" key={plan.name}><div className="plan-top"><span>{plan.number}</span><span>{planMode === 'saas' ? 'NEGOTIABLE BY SCOPE' : 'ONE-TIME · YOU OWN IT'}</span></div><h3>{plan.name}</h3><p className="plan-price">{plan.price}</p><p className="plan-caption">{plan.caption}</p><ul>{plan.features.map((feature) => <li key={feature}>{feature}</li>)}</ul><a className="plan-action" href={planEmail(plan.name, planMode)}>{plan.action} <ArrowUpRight size={16} /></a></article>)}</div>
       </section>
 
       <span id="contact-boundary" className="contact-boundary" aria-hidden="true" />
