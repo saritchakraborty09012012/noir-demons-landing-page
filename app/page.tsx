@@ -57,7 +57,7 @@ const comparisonRows = [
   { label: 'Bug fixes', license: 'Separate contract', saas: 'Handled by our team' },
   { label: 'New features', license: 'Scoped separately', saas: 'Roll into your plan' },
   { label: 'Recurring payments', license: 'None', saas: 'Yes — one simple plan' },
-  { label: 'Customer independence', license: 'High', saas: 'Lower' },
+  { label: 'Client independence', license: 'High — you operate it yourself', saas: 'Lower — we operate it for you' },
   { label: 'Your control', license: 'Higher', saas: 'Lower' },
   { label: 'Your responsibility', license: 'Higher', saas: 'Lower' },
   { label: 'Scalability', license: 'Harder', saas: 'Much easier' },
