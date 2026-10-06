@@ -64,7 +64,7 @@ const comparisonRows = [
   { label: 'Backend', license: 'You own and control it', saas: 'We run it — you steer it' },
 ]
 
-const planEmail = (plan: string, mode: 'saas' | 'license') => `mailto:support.noirdemons@puszao.resend.app?subject=${encodeURIComponent(`NDE NoirDemons ${mode === 'saas' ? 'SaaS' : 'Source-code'} ${plan} plan enquiry`)}&body=${encodeURIComponent(`Hello NDE (NoirDemons) team,\n\nI am interested in the ${plan} plan (${mode === 'saas' ? 'managed service / SaaS' : 'one-time source code purchase'}).\n\nKindly mention your Custom Features:\n\n`)}`
+const planEmail = (plan: string, mode: 'saas' | 'license') => `mailto:nde.noirdemons@atomicmail.io?subject=${encodeURIComponent(`NDE NoirDemons ${mode === 'saas' ? 'SaaS' : 'Source-code'} ${plan} plan enquiry`)}&body=${encodeURIComponent(`Hello NDE (NoirDemons) team,\n\nI am interested in the ${plan} plan (${mode === 'saas' ? 'managed service / SaaS' : 'one-time source code purchase'}).\n\nKindly mention your Custom Features:\n\n`)}`
 
 
 const GALAXY_STARS = 2600
@@ -411,10 +411,10 @@ export default function Page() {
           <button onClick={() => scrollTo('services')}>Services</button>
           <button onClick={() => scrollTo('plans')}>Plans</button>
           <button onClick={() => scrollTo('vision')}>Our vision</button>
-          <a href="mailto:support.noirdemons@puszao.resend.app">Contact</a>
+          <a href="mailto:nde.noirdemons@atomicmail.io">Contact</a>
         </div>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
-        <a className="nav-contact" href="mailto:support.noirdemons@puszao.resend.app">Start a conversation <ArrowUpRight size={15} /></a>
+        <a className="nav-contact" href="mailto:nde.noirdemons@atomicmail.io">Start a conversation <ArrowUpRight size={15} /></a>
       </nav>
 
       <section className="hero" id="top">
@@ -527,7 +527,7 @@ export default function Page() {
       </section>
 
       <span id="contact-boundary" className="contact-boundary" aria-hidden="true" />
-      <section className="contact-section section-pad" id="contact"><div className="contact-orbit" aria-hidden="true"><div /><div /><div /></div><div className="contact-content"><p className="eyebrow">A new signal is forming</p><h2>Have a difficult<br /><em>problem?</em></h2><a className="contact-button" href="mailto:support.noirdemons@puszao.resend.app">Let&apos;s talk <Mail size={17} /></a></div></section>
+      <section className="contact-section section-pad" id="contact"><div className="contact-orbit" aria-hidden="true"><div /><div /><div /></div><div className="contact-content"><p className="eyebrow">A new signal is forming</p><h2>Have a difficult<br /><em>problem?</em></h2><a className="contact-button" href="mailto:nde.noirdemons@atomicmail.io">Let&apos;s talk <Mail size={17} /></a></div></section>
 
       <footer className="footer"><div className="footer-brand">
           <span className="brand-row">
@@ -538,7 +538,7 @@ export default function Page() {
             </span>
           </span>
           <span className="brand-tagline">formerly Novexa</span>
-        </div><p>Building intelligent tools for innovation,<br />finance, analytics, and education.</p><div className="footer-right"><span>© 2026 NDE · NoirDemons</span><a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a></div></footer>
+        </div><p>Building intelligent tools for innovation,<br />finance, analytics, and education.</p><div className="footer-right"><span>© 2026 NDE · NoirDemons</span><a href="mailto:nde.noirdemons@atomicmail.io">nde.noirdemons@atomicmail.io</a></div></footer>
     </main>
   )
 }

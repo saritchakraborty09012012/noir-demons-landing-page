@@ -244,7 +244,7 @@ Most content and branding can be changed without touching component logic.
 - **Products, plans, and the sales email** → the `products`, `plans`, and `planEmail` definitions at the top of `app/page.tsx`.
 - **Colors, type, spacing, breakpoints, animations** → `app/globals.css`.
 - **Logo, favicons, share image** → drop new files into `public/` and update the paths in `app/layout.tsx` and `app/page.tsx`.
-- **Contact address** → search for `support.noirdemons@puszao.resend.app` across `app/`.
+- **Contact address** → search for `nde.noirdemons@atomicmail.io` across `app/`.
 - **Starfield density and palette** → the `GALAXY_STARS`, `WORDMARK_STARS`, and `AMBIENT_STARS` constants in `app/page.tsx`.
 
 ---
@@ -299,7 +299,7 @@ Pick a plan in the Build Studio section and use its action button — it opens a
 
 ## Contact
 
-- **Email:** [support.noirdemons@puszao.resend.app](mailto:support.noirdemons@puszao.resend.app)
+- **Email:** [nde.noirdemons@atomicmail.io](mailto:nde.noirdemons@atomicmail.io)
 - **Live site:** [https://noir-demons.vercel.app](https://noir-demons.vercel.app)
 
 ---

@@ -145,7 +145,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/images/noirdemons.png`,
   image: `${SITE_URL}/images/noirdemons.png`,
-  email: 'support.noirdemons@puszao.resend.app',
+  email: 'nde.noirdemons@atomicmail.io',
   description: DEFAULT_DESCRIPTION,
   foundingDate: '2026',
   areaServed: 'IN',
