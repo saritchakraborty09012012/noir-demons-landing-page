@@ -20,6 +20,7 @@
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
+- [Demo Video](#demo-video)
 - [Scripts](#scripts)
 - [SEO & Discoverability](#seo--discoverability)
 - [Customization](#customization)
@@ -194,6 +195,23 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ```bash
 pnpm build     # type-checks and produces an optimized production build
 pnpm start     # serves the production build locally
+```
+
+---
+
+## Demo Video
+
+| File | Details |
+| --- | --- |
+| [`demo video.mp4`](./demo%20video.mp4) | 3 min 10 s · 1920×1080 · 30 fps · 76 MB · H.264 + AAC |
+
+The project's demo recording lives in the repo root. It is committed in a compressed form (3200 kbps two-pass) so it stays under GitHub's 100 MB per-file push limit.
+
+The untouched original — `demo video.original.mp4` (167 MB) — is kept next to it locally and gitignored.
+
+```bash
+# watch it (Windows)
+start "demo video.mp4"
 ```
 
 ---

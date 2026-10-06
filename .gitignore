@@ -7,3 +7,7 @@ node_modules
 .DS_Store
 tsconfig.tsbuildinfo
 *.tsbuildinfo
+
+# Local demo artefacts
+demo video/
+demo video.original.mp4
