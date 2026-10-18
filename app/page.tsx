@@ -3,12 +3,22 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, ChevronDown, Crosshair, Mail, Menu, MoveUpRight, Sparkles, X } from 'lucide-react'
 
-const products = [
+type Product = {
+  number: string
+  name: string
+  category: string
+  description: string
+  url: string
+  mark: string
+  soon?: boolean
+}
+
+const products: Product[] = [
   { number: '01', name: 'Novexa', category: 'Idea validation', description: 'Turn raw ideas into structured, investable opportunities with AI-guided strategy.', url: 'https://novexa-idea-validator.lovable.app/', mark: 'NX' },
   { number: '02', name: 'EconoMind AI', category: 'Finance intelligence', description: 'Understand money, markets, and business decisions through a calm, intelligent lens.', url: 'https://econo-mind-ai-novexa.lovable.app', mark: 'EM' },
   { number: '03', name: 'BlitzData', category: 'Business analytics', description: 'Move from complex datasets to clear, actionable decisions in minutes.', url: 'https://blitzdata-novexa.lovable.app/', mark: 'BD' },
   { number: '04', name: 'Solve NCERT', category: 'Learning systems', description: 'Build stronger understanding with verified explanations and adaptive study tools.', url: 'https://solvencert-novexa.vercel.app/', mark: 'SN' },
-  { number: '05', name: 'Novexis', category: 'AI-native development', description: 'A new environment for thinking, building, and shipping with intelligent agents.', url: '#', mark: 'NV', soon: true },
+  { number: '05', name: 'Woodcrest Co.', category: 'Fencing & outdoor builds', description: 'New installs, repairs and decks — watch a fence go up board by board and price a job in twenty seconds.', url: 'https://woodcrest-co.vercel.app/', mark: 'WC' },
 ]
 
 const saasPlans = [

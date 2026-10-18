@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     'EconoMind AI',
     'BlitzData',
     'Solve NCERT',
-    'Novexis',
+    'Woodcrest Co.',
     'software studio India',
     'custom web applications',
     'business analytics',

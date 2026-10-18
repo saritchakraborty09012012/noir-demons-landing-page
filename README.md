@@ -84,7 +84,7 @@ NDE ships a growing constellation of products. Each is selectable on the Ecosyst
 | 02 | **EconoMind AI** | Finance intelligence | Understand money, markets, and business decisions through a calm, intelligent lens. | Live |
 | 03 | **BlitzData** | Business analytics | Move from complex datasets to clear, actionable decisions in minutes. | Live |
 | 04 | **Solve NCERT** | Learning systems | Build stronger understanding with verified explanations and adaptive study tools. | Live |
-| 05 | **Novexis** | AI-native development | A new environment for thinking, building, and shipping with intelligent agents. | In the making |
+| 05 | **Woodcrest Co.** | Fencing & outdoor builds | New installs, repairs and decks — watch a fence go up board by board and price a job in twenty seconds. | Live |
 
 Product data (name, category, description, URL, status) is defined once in `app/page.tsx` and drives both the product list and the product card.
 
