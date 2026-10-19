@@ -18,7 +18,7 @@ const products: Product[] = [
   { number: '02', name: 'EconoMind AI', category: 'Finance intelligence', description: 'Understand money, markets, and business decisions through a calm, intelligent lens.', url: 'https://econo-mind-ai-novexa.lovable.app', mark: 'EM' },
   { number: '03', name: 'BlitzData', category: 'Business analytics', description: 'Move from complex datasets to clear, actionable decisions in minutes.', url: 'https://blitzdata-novexa.lovable.app/', mark: 'BD' },
   { number: '04', name: 'Solve NCERT', category: 'Learning systems', description: 'Build stronger understanding with verified explanations and adaptive study tools.', url: 'https://solvencert-novexa.vercel.app/', mark: 'SN' },
-  { number: '05', name: 'Woodcrest Co.', category: 'Fencing & outdoor builds', description: 'New installs, repairs and decks — watch a fence go up board by board and price a job in twenty seconds.', url: 'https://woodcrest-co.vercel.app/', mark: 'WC' },
+  { number: '05', name: 'Woodcrest Co.', category: 'Fencing & outdoor builds', description: 'New installs, repairs and decks — watch a fence go up board by board and price a job in twenty seconds.', url: 'https://woodcrest-co-nde.vercel.app/', mark: 'WC' },
 ]
 
 const saasPlans = [
