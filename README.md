@@ -96,9 +96,9 @@ NDE also operates a custom development studio. Four negotiable plans are present
 
 | # | Plan | Price | Best for |
 | --- | --- | --- | --- |
-| 01 | **Starter** | ±₹5,000 | Institutions and small businesses ready to launch. |
-| 02 | **Business** | ±₹10,000 | Teams that need a dependable digital operation. |
-| 03 | **Pro** | ±₹20,000 | Ambitious products with real operational complexity. |
+| 01 | **Starter** | ±₹2,000 | Institutions and small businesses ready to launch. |
+| 02 | **Business** | ±₹6,000 | Teams that need a dependable digital operation. |
+| 03 | **Pro** | ±₹10,000 | Ambitious products with real operational complexity. |
 | 04 | **Custom** | Let's discuss | Large systems, SaaS products, and specialized software. |
 
 Each plan's "action" button opens a `mailto:` with the plan name pre-filled in both the subject and the body.

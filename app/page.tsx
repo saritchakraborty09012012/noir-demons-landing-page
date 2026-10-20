@@ -22,9 +22,9 @@ const products: Product[] = [
 ]
 
 const saasPlans = [
-  { number: '01', name: 'Starter', price: '±₹5,000 · negotiable', caption: 'For institutions and small businesses ready to launch.', features: ['Basic website or web app', 'Forms, dashboards, and CRUD flows', 'Basic database integration', 'Responsive custom UI/UX', 'Deployment and setup'], action: 'Start your build' },
-  { number: '02', name: 'Business', price: '±₹10,000 · negotiable', caption: 'For teams that need a dependable digital operation.', features: ['Advanced business applications', 'Authentication and user roles', 'Admin dashboards', 'Database and API integrations', 'Automated workflows', 'Deployment and configuration'], action: 'Plan my application' },
-  { number: '03', name: 'Pro', price: '±₹20,000 · negotiable', caption: 'For ambitious products with real operational complexity.', features: ['Full-featured custom applications', 'Complex dashboards and management systems', 'Advanced integrations and automation', 'Multiple user roles', 'Payments, notifications, and third-party services', 'Production deployment'], action: 'Build something serious' },
+  { number: '01', name: 'Starter', price: '±₹2,000 · negotiable', caption: 'For institutions and small businesses ready to launch.', features: ['Basic website or web app', 'Forms, dashboards, and CRUD flows', 'Basic database integration', 'Responsive custom UI/UX', 'Deployment and setup'], action: 'Start your build' },
+  { number: '02', name: 'Business', price: '±₹6,000 · negotiable', caption: 'For teams that need a dependable digital operation.', features: ['Advanced business applications', 'Authentication and user roles', 'Admin dashboards', 'Database and API integrations', 'Automated workflows', 'Deployment and configuration'], action: 'Plan my application' },
+  { number: '03', name: 'Pro', price: '±₹10,000 · negotiable', caption: 'For ambitious products with real operational complexity.', features: ['Full-featured custom applications', 'Complex dashboards and management systems', 'Advanced integrations and automation', 'Multiple user roles', 'Payments, notifications, and third-party services', 'Production deployment'], action: 'Build something serious' },
   { number: '04', name: 'Custom', price: 'Let’s discuss', caption: 'For large systems, SaaS products, and specialized software.', features: ['Institutional systems', 'Startup MVPs', 'Custom SaaS products', 'Highly specialized software', 'Complex requirements', 'Long-term development partnership'], action: 'Discuss your vision' },
 ]
 
@@ -52,7 +52,7 @@ const engagementModels = [
     title: 'Run it with us.',
     copy: 'We keep the infrastructure, databases, updates and fixes on our plate while you keep serving customers. The product quietly gets better every month — without a single ticket landing on your desk.',
     priceLabel: 'Starts at',
-    price: '₹5,000 · recurring',
+    price: '₹2,000 · recurring',
     points: ['We run the infrastructure for you', 'Updates and bug fixes included', 'New features roll straight into your plan', 'Predictable recurring plan · easy to scale'],
     featured: true,
   },
