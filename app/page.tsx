@@ -19,6 +19,7 @@ const products: Product[] = [
   { number: '03', name: 'BlitzData', category: 'Business analytics', description: 'Move from complex datasets to clear, actionable decisions in minutes.', url: 'https://blitzdata-novexa.lovable.app/', mark: 'BD' },
   { number: '04', name: 'Solve NCERT', category: 'Learning systems', description: 'Build stronger understanding with verified explanations and adaptive study tools.', url: 'https://solvencert-novexa.vercel.app/', mark: 'SN' },
   { number: '05', name: 'Woodcrest Co.', category: 'Fencing & outdoor builds', description: 'New installs, repairs and decks — watch a fence go up board by board and price a job in twenty seconds.', url: 'https://woodcrest-co-nde.vercel.app/', mark: 'WC' },
+  { number: '06', name: 'GlossDrive Co.', category: 'Car detailing & ceramic care', description: 'Foam wash, paint correction and ceramic coating — book a mobile detail at your driveway and pick your shine in three packages.', url: 'https://gloss-drive-co-nde.vercel.app/', mark: 'GD' },
 ]
 
 const saasPlans = [
@@ -445,7 +446,7 @@ export default function Page() {
           <div className="crosshair crosshair-a"><Crosshair size={15} /></div><div className="crosshair crosshair-b"><Crosshair size={12} /></div>
         </div>
         <div className="scroll-cue"><span>Scroll to enter</span><div className="scroll-line" /></div>
-        <div className="hero-index">NDE — NOIRDEMONS / <span>01—05</span></div>
+        <div className="hero-index">NDE — NOIRDEMONS / <span>01—06</span></div>
       </section>
 
       <section className="manifesto section-pad" id="vision">
@@ -459,7 +460,7 @@ export default function Page() {
 
       <section className="ecosystem section-pad" id="ecosystem">
         <div className="section-kicker"><span>( B )</span><span>THE ECOSYSTEM</span><span>SELECT A SIGNAL</span></div>
-        <div className="ecosystem-heading"><h2>Five ways to<br /><em>move forward.</em></h2><p>One studio. An expanding constellation of products designed to make difficult things feel possible.</p></div>
+        <div className="ecosystem-heading"><h2>Six ways to<br /><em>move forward.</em></h2><p>One studio. An expanding constellation of products designed to make difficult things feel possible.</p></div>
         <div className="product-stage">
           <div className="product-list" role="tablist" aria-label="NDE — NoirDemons products">
             {products.map((product, index) => <button key={product.name} className={`product-tab ${activeProduct === index ? 'active' : ''}`} onClick={() => setActiveProduct(index)} role="tab" aria-selected={activeProduct === index}><span>{product.number}</span><span>{product.name}</span><span className="tab-arrow" onClick={(e) => { if (!product.soon) { e.stopPropagation(); window.open(product.url, '_blank', 'noopener,noreferrer'); } }}>{product.soon ? 'SOON' : <ArrowUpRight size={17} />}</span></button>)}

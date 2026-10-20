@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     'BlitzData',
     'Solve NCERT',
     'Woodcrest Co.',
+    'GlossDrive Co.',
     'software studio India',
     'custom web applications',
     'business analytics',
