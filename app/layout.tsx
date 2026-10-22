@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     'Solve NCERT',
     'Woodcrest Co.',
     'GlossDrive Co.',
+    'Oakhaven Home',
     'software studio India',
     'custom web applications',
     'business analytics',
