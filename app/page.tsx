@@ -20,7 +20,7 @@ const products: Product[] = [
   { number: '04', name: 'Solve NCERT', category: 'Learning systems', description: 'Build stronger understanding with verified explanations and adaptive study tools.', url: 'https://solvencert-novexa.vercel.app/', mark: 'SN' },
   { number: '05', name: 'Woodcrest Co.', category: 'Fencing & outdoor builds', description: 'New installs, repairs and decks — watch a fence go up board by board and price a job in twenty seconds.', url: 'https://woodcrest-co-nde.vercel.app/', mark: 'WC' },
   { number: '06', name: 'GlossDrive Co.', category: 'Car detailing & ceramic care', description: 'Foam wash, paint correction and ceramic coating — book a mobile detail at your driveway and pick your shine in three packages.', url: 'https://gloss-drive-co-nde.vercel.app/', mark: 'GD' },
-  { number: '07', name: 'Oakhaven Home', category: 'Luxury custom homes', description: 'Design and build luxury custom homes — from first layout sketch to the day you get the keys.', url: 'https://oakhaven-home-nde-snowy.vercel.app/', mark: 'OH' },
+  { number: '07', name: 'Oakhaven Home', category: 'Luxury custom homes', description: 'Design and build luxury custom homes — from first layout sketch to the day you get the keys.', url: 'https://oakhaven-homes-co-nde.vercel.app/', mark: 'OH' },
 ]
 
 const saasPlans = [
