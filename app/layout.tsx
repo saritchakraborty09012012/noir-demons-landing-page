@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     'Woodcrest Co.',
     'GlossDrive Co.',
     'Oakhaven Home',
+    'Aether Studio',
     'software studio India',
     'custom web applications',
     'business analytics',
