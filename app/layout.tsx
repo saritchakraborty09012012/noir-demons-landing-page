@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     'GlossDrive Co.',
     'Oakhaven Home',
     'Aether Studio',
+    'KOKO Coconut Co.',
     'software studio India',
     'custom web applications',
     'business analytics',
