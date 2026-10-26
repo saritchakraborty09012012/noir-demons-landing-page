@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     'Oakhaven Home',
     'Aether Studio',
     'KOKO Coconut Co.',
+    'Aven Serum',
     'software studio India',
     'custom web applications',
     'business analytics',

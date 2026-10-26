@@ -23,6 +23,7 @@ const products: Product[] = [
   { number: '07', name: 'Oakhaven Home', category: 'Luxury custom homes', description: 'Design and build luxury custom homes — from first layout sketch to the day you get the keys.', url: 'https://oakhaven-homes-co-nde.vercel.app/', mark: 'OH' },
   { number: '08', name: 'Aether Studio', category: 'Unreal Engine works', description: 'Real-time 3D scenes, cinematic environments and interactive builds engineered in Unreal Engine.', url: 'https://aether-studio-nde.vercel.app/', mark: 'AE' },
   { number: '09', name: 'KOKO Coconut Co.', category: 'Pure coconut water', description: 'Fresh, cold-chilled coconut water with nothing added — picked, packed and delivered straight to your door.', url: 'https://koko-coconut-co-nde.vercel.app/', mark: 'KC' },
+  { number: '10', name: 'Aven Serum', category: 'Vitamin C skincare', description: 'A brightening Vitamin C serum — a simple daily drop for clearer, even-toned, glowing skin.', url: 'https://aven-serum-nde.vercel.app/', mark: 'AV' },
 ]
 
 const saasPlans = [
@@ -449,7 +450,7 @@ export default function Page() {
           <div className="crosshair crosshair-a"><Crosshair size={15} /></div><div className="crosshair crosshair-b"><Crosshair size={12} /></div>
         </div>
         <div className="scroll-cue"><span>Scroll to enter</span><div className="scroll-line" /></div>
-        <div className="hero-index">NDE — NOIRDEMONS / <span>01—09</span></div>
+        <div className="hero-index">NDE — NOIRDEMONS / <span>01—10</span></div>
       </section>
 
       <section className="manifesto section-pad" id="vision">
@@ -463,7 +464,7 @@ export default function Page() {
 
       <section className="ecosystem section-pad" id="ecosystem">
         <div className="section-kicker"><span>( B )</span><span>THE ECOSYSTEM</span><span>SELECT A SIGNAL</span></div>
-        <div className="ecosystem-heading"><h2>Nine ways to<br /><em>move forward.</em></h2><p>One studio. An expanding constellation of products designed to make difficult things feel possible.</p></div>
+        <div className="ecosystem-heading"><h2>Ten ways to<br /><em>move forward.</em></h2><p>One studio. An expanding constellation of products designed to make difficult things feel possible.</p></div>
         <div className="product-stage">
           <div className="product-list" role="tablist" aria-label="NDE — NoirDemons products">
             {products.map((product, index) => <button key={product.name} className={`product-tab ${activeProduct === index ? 'active' : ''}`} onClick={() => setActiveProduct(index)} role="tab" aria-selected={activeProduct === index}><span>{product.number}</span><span>{product.name}</span><span className="tab-arrow" onClick={(e) => { if (!product.soon) { e.stopPropagation(); window.open(product.url, '_blank', 'noopener,noreferrer'); } }}>{product.soon ? 'SOON' : <ArrowUpRight size={17} />}</span></button>)}

@@ -89,6 +89,7 @@ NDE ships a growing constellation of products. Each is selectable on the Ecosyst
 | 07 | **Oakhaven Home** | Luxury custom homes | Design and build luxury custom homes — from first layout sketch to the day you get the keys. | Live |
 | 08 | **Aether Studio** | Unreal Engine works | Real-time 3D scenes, cinematic environments and interactive builds engineered in Unreal Engine. | Live |
 | 09 | **KOKO Coconut Co.** | Pure coconut water | Fresh, cold-chilled coconut water with nothing added — picked, packed and delivered straight to your door. | Live |
+| 10 | **Aven Serum** | Vitamin C skincare | A brightening Vitamin C serum — a simple daily drop for clearer, even-toned, glowing skin. | Live |
 
 Product data (name, category, description, URL, status) is defined once in `app/page.tsx` and drives both the product list and the product card.
 
