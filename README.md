@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/15511d12-af89-4434-a6eb-03f3f1677677
-
 # NDE — NoirDemons
 
 > **NDE** (short for *NoirDemons*) is the public-facing brand of **NoirDemons**, formerly known as **Novexa** — an independent intelligence studio that builds intelligent systems for ideas, finance, analytics, education, and the future of development.
@@ -209,6 +205,8 @@ pnpm start     # serves the production build locally
 ---
 
 ## Demo Video
+
+https://github.com/user-attachments/assets/15511d12-af89-4434-a6eb-03f3f1677677
 
 | File | Details |
 | --- | --- |
