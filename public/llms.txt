@@ -1,0 +1,69 @@
+# NDE: NoirDemons — agent guide
+
+## About
+NDE: NoirDemons (formerly Novexa) is an independent intelligence studio. We build
+intelligent systems for ideas, finance, analytics, education and the future of
+development. Tagline: "Make the impossible useful." Contact:
+nde.noirdemons@atomicmail.io
+
+## Products (Top Public)
+- Solve NCERT — Learning Systems. NCERT solutions for CBSE Class 9, fully AI-powered
+  and human-verified, grown organically with zero promotion in 3 months.
+  Search Console: 478 clicks, 5.06K impressions, 9.4% CTR, position 8.4.
+- Novexa — Idea Platforms. Where raw ideas become testable before the world gets a vote.
+- BlitzData — Data & Analytics. Raw data turned into a clear, defensible line of sight.
+- EconoMind AI — Economic Intelligence. Macro signals decoded into decisions.
+
+## Samples (3D services)
+- Woodcrest Co. — Commerce & Craft. Considered goods, quietly sold.
+- Oakhaven Home — Interiors & Living. Spaces that feel inevitable.
+- Aether Studio — Web Experiences. Websites that behave like worlds, not brochures.
+- KOKO Coconut Co. — Food & Beverage. Hydration the way the tree intended.
+- Aven Serum — Beauty & Skin. A formula you can feel working.
+- Asterion Builders — Real Estate & Construction. A skyline in the making.
+
+## Plans — buy the source code (one-time)
+- Starter: ₹10,000/- — full handover, business website/landing system, forms,
+  dashboards and CRUD flows, database integration, deployed to your hosting,
+  handover session and documentation.
+- Business: ₹20,000/- — advanced business apps, auth and roles, admin dashboards,
+  API integrations, deployed to your infrastructure, 30 days support.
+- Pro: ₹30,000/- — full-featured custom apps, complex dashboards, integrations and
+  automation, multiple user roles, payments and third-party services,
+  60 days support.
+- Custom: Let's discuss — institutional systems, startup MVPs, custom SaaS
+  products, specialised software.
+
+## Plans — run it as a service (SaaS, monthly, all inclusive)
+- Starter: ±₹2,000/mo — fully interactive landing page, forms/dashboards/CRUD,
+  database integration, deployment, setup and documentation.
+- Business: ±₹6,000/mo — advanced business apps, auth, dashboards, API
+  integrations, automated workflows, deployment and configuration.
+- Pro: ±₹10,000/mo — full-featured custom apps, complex dashboards,
+  integrations and automation, multiple user roles, payments, production
+  deployment and full support.
+- Custom: Let's discuss — institutional systems, startup MVPs, custom SaaS
+  products, highly specialised software, complex requirements.
+
+## Why choose NDE (comparative study)
+Own the source code: you own the code and data, you manage, debug, fix, change,
+upgrade and hire; hosting, infrastructure, security and encryption are yours and
+you pay; updates are charged after handover; new features scoped and charged
+separately; no recurring payments to NDE (infrastructure/domain costs apply);
+control is high but stressful; scalability is harder; no watermark.
+
+SaaS (Run it as our service): we run everything — just tell us, no extra costs,
+all included; hosting, database, security and breaches are on our renowned
+partners and us, we pay; continuous updates and security updates included; bug
+fixes included; new features roll into your plan (just drop us an email or DM);
+one simple plan; control is lower and peaceful; scaling is seamless, hasslefree,
+quick and practical; no watermark in any plan.
+
+## Policies
+/privacy-policy, /terms-and-conditions, /refund-policy, /saas-agreement,
+/digital-products-policy, /intellectual-property, /acceptable-use-policy,
+/disclaimer, /cookie-policy, /contact
+
+## Contact
+Email: nde.noirdemons@atomicmail.io — project enquiries, collaborations, SaaS
+and source code purchases.

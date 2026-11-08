@@ -17,16 +17,25 @@ import StageDriver from "./components/StageDriver";
 import OverlaysRoot from "./components/OverlaysRoot";
 import DivePage from "./components/DivePage";
 import PolicyPage from "./components/PolicyPage";
+import AgentPage from "./components/AgentPage";
 import { POLICIES } from "./lib/policies";
 import SeoCopy from "./components/SeoCopy";
 
 gsap.registerPlugin(ScrollTrigger);
+
+export const isAgent = () => {
+  const ua = navigator.userAgent || "";
+  return /bot|crawl|spider|slurp|mediapartners|facebookexternalhit|embedly|quora|curl|wget|python-requests|http-client|openai|anthropic|claude|gptbot|chatgpt|googlebot|bingbot|duckduck|baiduspider|yandex|notion|slack|discord|telegram|mastodon|perplexity|copilot|gemini|oai-searchbot/i.test(
+    ua,
+  );
+};
 
 export default function App() {
   const booted = useReel((s) => s.booted);
   const dive = useReel((s) => s.dive);
   const policy = POLICIES.find((p) => p.slug === location.pathname);
   if (policy) return <PolicyPage />;
+  if (isAgent()) return <AgentPage />;
   const quality = useReel((s) => s.quality);
   const setBoot = useReel((s) => s.setBoot);
   const finishBoot = useReel((s) => s.finishBoot);
