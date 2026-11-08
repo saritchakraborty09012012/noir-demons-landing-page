@@ -176,12 +176,24 @@
 }
 
 @media (max-width: 860px) {
-  .dive__header { row-gap: 8px; }
-  .dive__logo { width: 38px; height: 38px; }
-  .dive__word { font-size: 16px; }
+  /* Shorter header; all clickable texts in ONE sideways-scrollable line */
+  .dive__header { row-gap: 6px; min-height: 50px; padding-top: 6px; padding-bottom: 6px; }
+  .dive__logo { width: 32px; height: 32px; }
+  .dive__word { font-size: 15px; }
   .dive__back { font-size: 9px; }
-  .dive__nav { gap: 8px 24px; }
-  .dive__nav button { font-size: 10px; }
+  .dive__nav {
+    /* one line, sideways scrollable — page itself never scrolls sideways */
+    flex-wrap: nowrap;
+    justify-content: safe center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    min-width: 0;
+    gap: 0 20px;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .dive__nav::-webkit-scrollbar { display: none; }
+  .dive__nav button { font-size: 10px; flex: none; }
   .dive__nav-no { display: none; }
   .dive__cta { display: none; }
   .dive__lede { white-space: normal; }
