@@ -1,13 +1,5 @@
-# Environment variables
-.env*.local
-
-# Common ignores
 node_modules
-.next/
+dist
+docs/frames
 .DS_Store
-tsconfig.tsbuildinfo
-*.tsbuildinfo
-
-# Local demo artefacts
-demo video/
-demo video.original.mp4
+*.local
