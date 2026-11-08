@@ -7,7 +7,8 @@
   height: 64px;
   z-index: 80;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  /* equal side columns => the nav sits dead-centre on the page */
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: clamp(16px, 2.2vw, 36px);
   padding: 0 var(--pad);
@@ -36,6 +37,7 @@
   min-width: 0;
   padding: 0;
   text-align: left;
+  justify-self: start;
 }
 .brand__logo {
   width: 46px;

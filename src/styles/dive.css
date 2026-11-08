@@ -15,23 +15,27 @@
 .dive__scroll { height: 100%; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; outline: none; }
 .dive__header {
   position: sticky; top: 0; z-index: 5;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  display: grid;
+  /* equal side columns => nav sits dead-centre, logo left, actions right */
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
   min-height: 82px; padding: 0 clamp(20px, 5vw, 76px);
   background: rgba(5, 5, 6, 0.94);
   border-bottom: 1px solid rgba(244, 244, 242, 0.18);
   backdrop-filter: blur(8px);
 }
-.dive__brand { display: flex; align-items: center; gap: 12px; }
+.dive__brand { display: flex; align-items: center; gap: 12px; grid-column: 1; justify-self: start; min-width: 0; }
 .dive__logo { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(244, 244, 242, 0.3); }
 .dive__word { font-family: Georgia, "Times New Roman", serif; font-size: 22px; line-height: 1.05; }
 .dive__word small { display: block; font-family: Arial, sans-serif; font-size: 8px; letter-spacing: 0.24em; color: #8b8b88; margin-top: 3px; }
-.dive__nav { display: flex; gap: clamp(18px, 3vw, 44px); }
-.dive__nav button { background: transparent; color: #f4f4f2; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 0; }
+.dive__nav { display: flex; gap: clamp(14px, 2vw, 30px); grid-column: 2; justify-self: center; }
+.dive__nav button { background: transparent; color: #f4f4f2; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 0; white-space: nowrap; }
 .dive__nav button:hover { color: #fff; text-decoration: underline; text-underline-offset: 6px; }
 .dive__nav-no { font-size: 8px; letter-spacing: 0.1em; color: #8b8b88; margin-right: 6px; }
 .cmp__plan-cta { display: inline-flex; margin-top: 14px; padding: 10px 14px; border: 1px solid rgba(244, 244, 242, 0.35); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #f4f4f2; }
 .cmp__plan-cta:hover { background: #f4f4f2; color: #080808; }
-.dive__head-actions { display: flex; align-items: center; gap: 22px; }
+.dive__head-actions { display: flex; align-items: center; justify-content: flex-end; gap: 22px; grid-column: 3; justify-self: end; }
 .dive__back { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8b88; background: transparent; padding: 6px 0; }
 .dive__back:hover { color: #f4f4f2; }
 .dive__cta { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #f4f4f2; padding: 6px 0 8px; border-bottom: 1px solid #f4f4f2; }
@@ -150,9 +154,33 @@
 .cmp__plan li:last-child { border-bottom: 0; }
 .cmp__saas { background: rgba(244, 244, 242, 0.05); border-left: 1px solid rgba(244, 244, 242, 0.1); border-right: 1px solid rgba(244, 244, 242, 0.1); color: #f4f4f2 !important; }
 .cmp__note { margin: 16px 0 0; font-size: 12.5px; line-height: 1.65; color: #8b8b88; }
+
+/* Mid widths: two clean rows — logo + actions on top, nav centred below */
+@media (max-width: 1366px) {
+  .dive__header {
+    grid-template-columns: 1fr auto;
+    row-gap: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .dive__brand { grid-row: 1; grid-column: 1; }
+  .dive__head-actions { grid-row: 1; grid-column: 2; }
+  .dive__nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px clamp(14px, 3vw, 34px);
+  }
+}
+
 @media (max-width: 860px) {
-  .dive__header { flex-wrap: wrap; row-gap: 10px; padding-top: 12px; padding-bottom: 12px; }
-  .dive__nav { order: 3; width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 10px 18px; }
+  .dive__header { row-gap: 8px; }
+  .dive__logo { width: 38px; height: 38px; }
+  .dive__word { font-size: 16px; }
+  .dive__back { font-size: 9px; }
+  .dive__nav { gap: 8px 24px; }
   .dive__nav button { font-size: 10px; }
   .dive__nav-no { display: none; }
   .dive__cta { display: none; }
