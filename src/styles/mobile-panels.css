@@ -18,21 +18,22 @@
   .table-cue { display: block; }
   .v-d { display: none; }
   .v-s { display: inline; }
+  /* small corner control: above the timeline bar, clear of the HUD clock */
   .table-detail-btn {
-    position: fixed; left: 50%; bottom: calc(var(--bar) + 100px); transform: translateX(-50%); z-index: 55;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    width: 92vw; max-width: 400px; padding: 12px;
+    position: fixed; right: 12px; bottom: calc(var(--bar) + 58px + var(--safe-b)); z-index: 55;
+    display: flex; align-items: center; gap: 6px;
+    width: auto; padding: 7px 10px;
     opacity: var(--a-table, 0);
-    border: 1px solid rgba(201, 162, 75, 0.5); background: rgba(201, 162, 75, 0.08);
-    font-family: var(--mono); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-hi);
+    border: 1px solid rgba(201, 162, 75, 0.5); background: rgba(8, 8, 9, 0.78);
+    font-family: var(--mono); font-size: 6.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-hi);
   }
-  .table-detail-btn i { font-style: normal; font-size: 12px; animation: hintArrow 1.9s var(--ease) infinite; }
+  .table-detail-btn i { font-style: normal; font-size: 9px; animation: hintArrow 1.9s var(--ease) infinite; }
   .table-detail-hint {
-    position: fixed; left: 50%; bottom: calc(var(--bar) + 154px); transform: translateX(-50%); z-index: 55; width: 92vw; max-width: 400px;
-    display: block;
-    margin: 0; padding: 11px 12px; text-align: center;
-    border: 1px solid rgba(236, 231, 221, 0.14); background: rgba(8, 10, 14, 0.9);
-    font-size: 10px; line-height: 1.6; color: var(--bone-dim);
+    position: fixed; right: 12px; bottom: calc(var(--bar) + 96px + var(--safe-b)); z-index: 55;
+    display: block; width: min(52vw, 210px);
+    margin: 0; padding: 8px 9px; text-align: right;
+    border: 1px solid rgba(236, 231, 221, 0.14); background: rgba(8, 10, 14, 0.92);
+    font-size: 8.5px; line-height: 1.55; color: var(--bone-dim);
     animation: shotIn 0.3s var(--ease) both;
   }
 
