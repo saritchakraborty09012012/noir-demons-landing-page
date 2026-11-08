@@ -234,6 +234,12 @@ export const DECISION_ROWS: [string, string, string][] = [
   ["Backend", "You own and control it", "We run it — you steer it"],
 ];
 
+/*
+ * Numbering restarts inside every group, site-wide:
+ *   Top public products 01–04 · 3D service samples 01–06 · 2D site services 01.
+ * The array order is the arrangement order (it drives the film orbit, the dive
+ * grids and the agent list), so pitches below stay index-aligned.
+ */
 export const PRODUCTS: Array<{
   no: string;
   name: string;
@@ -242,31 +248,31 @@ export const PRODUCTS: Array<{
   url: string;
   shot: string[];
 }> = [
-  { no: "01", name: "Novexa", category: "Idea Platforms", color: "#B7A6FF", url: "#", shot: ["/shots/product-01-novexa-1.jpg", "/shots/product-01-novexa-2.jpg"] },
-  { no: "02", name: "EconoMind AI", category: "Economic Intelligence", color: "#74C7FF", url: "#", shot: ["/shots/product-02-economind.jpg"] },
+  { no: "01", name: "Solve NCERT", category: "Learning Systems", color: "#8FE7A5", url: "#", shot: ["/shots/product-04-solvencert.jpg"] },
+  { no: "02", name: "Novexa", category: "Idea Platforms", color: "#B7A6FF", url: "#", shot: ["/shots/product-01-novexa-1.jpg", "/shots/product-01-novexa-2.jpg"] },
   { no: "03", name: "BlitzData", category: "Data & Analytics", color: "#6EF2FF", url: "#", shot: ["/shots/product-03-blitzdata.jpg"] },
-  { no: "04", name: "Solve NCERT", category: "Learning Systems", color: "#8FE7A5", url: "#", shot: ["/shots/product-04-solvencert.jpg"] },
-  { no: "05", name: "Woodcrest Co.", category: "Commerce & Craft", color: "#D7A55A", url: "#", shot: ["/shots/product-05-woodcrest.jpg"] },
-  { no: "06", name: "GlossDrive Co.", category: "Automotive Care", color: "#D8DEE8", url: "#", shot: ["/shots/product-06-glossdrive.jpg"] },
-  { no: "07", name: "Oakhaven Home", category: "Interiors & Living", color: "#F1E3CB", url: "#", shot: ["/shots/product-07-oakhaven.jpg"] },
-  { no: "08", name: "Aether Studio", category: "Web Experiences", color: "#9FD8FF", url: "https://aether-studio-nde.vercel.app/", shot: ["/shots/product-08-aether.jpg"] },
-  { no: "09", name: "KOKO Coconut Co.", category: "Food & Beverage", color: "#DDF6C8", url: "https://koko-coconut-co-nde.vercel.app/", shot: ["/shots/product-09-koko.jpg"] },
-  { no: "10", name: "Aven Serum", category: "Beauty & Skin", color: "#FFB1C4", url: "https://aven-serum-nde.vercel.app/", shot: ["/shots/product-10-aven.jpg"] },
-  { no: "11", name: "Asterion Builders", category: "Real Estate & Construction", color: "#A3B87C", url: "https://asterion-builders-nde.vercel.app/", shot: ["/shots/product-11-asterion.jpg"] },
+  { no: "04", name: "EconoMind AI", category: "Economic Intelligence", color: "#74C7FF", url: "#", shot: ["/shots/product-02-economind.jpg"] },
+  { no: "01", name: "Woodcrest Co.", category: "Commerce & Craft", color: "#D7A55A", url: "#", shot: ["/shots/product-05-woodcrest.jpg"] },
+  { no: "02", name: "Oakhaven Home", category: "Interiors & Living", color: "#F1E3CB", url: "#", shot: ["/shots/product-07-oakhaven.jpg"] },
+  { no: "03", name: "Aether Studio", category: "Web Experiences", color: "#9FD8FF", url: "https://aether-studio-nde.vercel.app/", shot: ["/shots/product-08-aether.jpg"] },
+  { no: "04", name: "KOKO Coconut Co.", category: "Food & Beverage", color: "#DDF6C8", url: "https://koko-coconut-co-nde.vercel.app/", shot: ["/shots/product-09-koko.jpg"] },
+  { no: "05", name: "Aven Serum", category: "Beauty & Skin", color: "#FFB1C4", url: "https://aven-serum-nde.vercel.app/", shot: ["/shots/product-10-aven.jpg"] },
+  { no: "06", name: "Asterion Builders", category: "Real Estate & Construction", color: "#A3B87C", url: "https://asterion-builders-nde.vercel.app/", shot: ["/shots/product-11-asterion.jpg"] },
+  { no: "01", name: "GlossDrive Co.", category: "Automotive Care", color: "#D8DEE8", url: "#", shot: ["/shots/product-06-glossdrive.jpg"] },
 ];
 
 export const PRODUCT_PITCH = [
-  "Where raw ideas become testable — before the world gets a vote.",
-  "Macro signals, decoded into decisions a human can actually make.",
-  "Raw data, turned into a clear and defensible line of sight.",
   "Answers that teach the next question instead of ending the conversation.",
+  "Where raw ideas become testable — before the world gets a vote.",
+  "Raw data, turned into a clear and defensible line of sight.",
+  "Macro signals, decoded into decisions a human can actually make.",
   "Considered goods, quietly sold. Commerce with its voice down.",
-  "A showroom shine, engineered as a repeatable digital service.",
   "Spaces that feel inevitable — and the systems that keep them that way.",
   "Websites that behave like worlds, not brochures.",
   "Hydration the way the tree intended. Brand, commerce and sunshine.",
   "A formula you can feel working, presented with the drama it deserves.",
   "A skyline in the making — construction rendered as a world you can walk through.",
+  "A showroom shine, engineered as a repeatable digital service.",
 ];
 
 export const NAV = [

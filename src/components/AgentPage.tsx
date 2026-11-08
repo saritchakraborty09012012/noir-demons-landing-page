@@ -33,7 +33,7 @@ export default function AgentPage() {
           </thead>
           <tbody>
             {PRODUCTS.slice(0, 4).map((p, i) => (
-              <tr key={p.no}>
+              <tr key={p.name}>
                 <td>
                   {p.no} {p.name}
                 </td>
@@ -49,7 +49,7 @@ export default function AgentPage() {
         <h2>All products and samples</h2>
         <ul>
           {PRODUCTS.map((p, i) => (
-            <li key={p.no}>
+            <li key={p.name}>
               <strong>
                 {p.no} {p.name}
               </strong>{" "}

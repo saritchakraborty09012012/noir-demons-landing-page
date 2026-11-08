@@ -19,14 +19,14 @@ const GROUPS: Array<{ id: string; title: string; sub: string; names: string[]; n
   {
     id: "dive-3d",
     title: "Our 3D Service Samples",
-    sub: "SERVICE / 05–09",
+    sub: "SERVICE / 01–06",
     note: "None of the products below belong to any original existing brand, nor are they sold or any brand's property — NDE (NoirDemons) is solely responsible for the development, maintenance, copyright and ownership of these samples. All names shown are fictional and any resemblance to real brands, products or persons is purely coincidental; trademarks belong to their respective owners. Samples are rendered for demonstration of NDE's capabilities only.",
     names: ["Woodcrest Co.", "Oakhaven Home", "Aether Studio", "KOKO Coconut Co.", "Aven Serum", "Asterion Builders"],
   },
   {
     id: "dive-2d",
     title: "Our 2D Site Services",
-    sub: "SERVICE / 10",
+    sub: "SERVICE / 01",
     names: ["GlossDrive Co."],
   },
 ];
@@ -115,7 +115,7 @@ export default function DivePage() {
                 {group.names.map((name) => {
                   const item = byName(name)!;
                   return (
-                    <article key={item.no} className="dive__sample">
+                    <article key={item.name} className="dive__sample">
                       <span className="dive__sample-shot">
                         <img src={item.shot[0]} alt={`${item.name} product screenshot`} loading="lazy" />
                       </span>

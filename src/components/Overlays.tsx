@@ -115,7 +115,7 @@ export function ConstellationPanel() {
           <div className="product-strip" aria-label="Select a product">
             {PRODUCTS.map((item, i) => (
               <button
-                key={item.no}
+                key={item.name}
                 className={i === focus ? "is-on" : ""}
                 onClick={() => jumpTo(0.318 + i * (0.09 / PRODUCTS.length), 1.1)}
                 aria-label={`Focus ${item.name}`}

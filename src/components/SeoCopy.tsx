@@ -30,7 +30,7 @@ export default function SeoCopy() {
       </p>
       <ul>
         {PRODUCTS.map((product, i) => (
-          <li key={product.no}>
+          <li key={product.name}>
             {product.no} {product.name} — {product.category}. {PRODUCT_PITCH[i]}.
             {product.url !== "#" ? (
               <>

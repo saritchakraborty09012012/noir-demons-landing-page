@@ -12,7 +12,7 @@
   animation: diveIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 @keyframes diveIn { from { opacity: 0; } to { opacity: 1; } }
-.dive__scroll { height: 100%; overflow-y: auto; scroll-behavior: smooth; outline: none; }
+.dive__scroll { height: 100%; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; outline: none; }
 .dive__header {
   position: sticky; top: 0; z-index: 5;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -65,8 +65,9 @@
 .dive__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(244, 244, 242, 0.18); }
 .dive__foot > a { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: clamp(18px, 2.4vw, 26px); }
 .dive__foot > a:hover { text-decoration: underline; }
-.dive__policies { display: grid; grid-template-columns: repeat(2, minmax(190px, 1fr)); gap: 8px 32px; max-width: 640px; margin: 18px 0 0; padding-top: 18px; border-top: 1px solid rgba(244, 244, 242, 0.12); }
-.dive__policies a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8b8b88; padding: 3px 0; }
+/* 2 columns that always fit the width — long policy titles wrap instead of pushing the page sideways */
+.dive__policies { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px clamp(14px, 3vw, 32px); max-width: 640px; margin: 18px 0 0; padding-top: 18px; border-top: 1px solid rgba(244, 244, 242, 0.12); }
+.dive__policies a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8b8b88; padding: 3px 0; overflow-wrap: anywhere; min-width: 0; }
 .dive__policies a:hover { color: #f4f4f2; text-decoration: underline; text-underline-offset: 4px; }
 
 /* Policy pages */
