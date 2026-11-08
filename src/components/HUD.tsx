@@ -63,17 +63,19 @@ export function HudClock() {
 }
 
 export function ScrollHint() {
+  const go = () => {
+    const state = useReel.getState();
+    // At the very end, the down arrow dives into the 2D page; anywhere else it
+    // scrolls one scene-length forward.
+    if (state.p >= 0.998) state.openDive();
+    else jumpTo(Math.min(1, state.p + 0.035), 1.4);
+  };
   return (
-    <button
-      type="button"
-      className="scroll-hint"
-      onClick={() => jumpTo(0.03, 1.7)}
-      aria-label="Scroll to begin the reel"
-    >
+    <button type="button" className="scroll-hint" onClick={go} aria-label="Scroll down">
       <span className="scroll-hint__bubble" aria-hidden="true">
         <i className="scroll-hint__arrow" />
       </span>
-      <span className="scroll-hint__label">Scroll to begin</span>
+      <span className="scroll-hint__label">Scroll</span>
     </button>
   );
 }

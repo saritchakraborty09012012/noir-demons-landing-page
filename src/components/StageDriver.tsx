@@ -29,7 +29,6 @@ export const ALPHA_WINDOWS = {
 export default function StageDriver() {
   useEffect(() => {
     const root = document.documentElement;
-    const hint = document.querySelector<HTMLElement>(".scroll-hint");
     const table = document.querySelector<HTMLElement>(".table-wrap");
     let live: HTMLElement[] = [];
     const collect = () => {
@@ -47,11 +46,6 @@ export default function StageDriver() {
         const a = win(p, w[0], w[1], w[2], w[3]);
         alphas[key] = a;
         root.style.setProperty(`--a-${key}`, a.toFixed(3));
-      }
-      if (hint) {
-        const gone = p > 0.0045;
-        hint.classList.toggle("is-gone", gone);
-        hint.inert = gone;
       }
       if (table) table.classList.toggle("is-in", alphas.table > 0.35);
       for (const el of live) {
