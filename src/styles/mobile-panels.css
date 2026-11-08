@@ -11,10 +11,30 @@
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
   }
-  table.decision { min-width: 540px; font-size: 9px; }
-  table.decision th { font-size: 6.5px; }
-  table.decision td:first-child { font-size: 7.5px; }
+  table.decision { min-width: 0; width: 100%; font-size: 8px; }
+  table.decision th { font-size: 6.5px; padding: 7px 5px; }
+  table.decision td { padding: 6px 5px; }
+  table.decision td:first-child { font-size: 7.5px; width: 22%; }
   .table-cue { display: block; }
+  .v-d { display: none; }
+  .v-s { display: inline; }
+  .table-detail-btn {
+    position: fixed; left: 50%; bottom: calc(var(--bar) + 100px); transform: translateX(-50%); z-index: 55;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 92vw; max-width: 400px; padding: 12px;
+    opacity: var(--a-table, 0);
+    border: 1px solid rgba(201, 162, 75, 0.5); background: rgba(201, 162, 75, 0.08);
+    font-family: var(--mono); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-hi);
+  }
+  .table-detail-btn i { font-style: normal; font-size: 12px; animation: hintArrow 1.9s var(--ease) infinite; }
+  .table-detail-hint {
+    position: fixed; left: 50%; bottom: calc(var(--bar) + 154px); transform: translateX(-50%); z-index: 55; width: 92vw; max-width: 400px;
+    display: block;
+    margin: 0; padding: 11px 12px; text-align: center;
+    border: 1px solid rgba(236, 231, 221, 0.14); background: rgba(8, 10, 14, 0.9);
+    font-size: 10px; line-height: 1.6; color: var(--bone-dim);
+    animation: shotIn 0.3s var(--ease) both;
+  }
 
   /* plans */
   .plans-hud {

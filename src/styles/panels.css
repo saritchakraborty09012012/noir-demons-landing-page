@@ -76,6 +76,8 @@
   text-transform: uppercase;
   color: var(--gold);
 }
+.v-s { display: none; }
+.table-detail-btn, .table-detail-hint { display: none; }
 table.decision {
   width: 100%;
   border-collapse: collapse;
