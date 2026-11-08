@@ -1,0 +1,2 @@
+:root { --ink: #050505; --bone: #ECE7DD; --gold: #C9A24B; }
+html,body,#root { background:#050505; color:#ECE7DD; margin:0; height:100%; }

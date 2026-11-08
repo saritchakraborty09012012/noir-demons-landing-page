@@ -1,0 +1,57 @@
+{
+  "corridor_brutal": {
+    "bytes": 357924,
+    "name": "corridor_brutal",
+    "tris": 51572
+  },
+  "crystal_shard": {
+    "bytes": 164732,
+    "name": "crystal_shard",
+    "tris": 28416
+  },
+  "engine_tower": {
+    "bytes": 518412,
+    "name": "engine_tower",
+    "tris": 45732
+  },
+  "house_wire": {
+    "bytes": 208372,
+    "name": "house_wire",
+    "tris": 53160
+  },
+  "key": {
+    "bytes": 96584,
+    "name": "key",
+    "tris": 22140
+  },
+  "nde_monogram": {
+    "bytes": 213176,
+    "name": "nde_monogram",
+    "tris": 25536
+  },
+  "portal_gate": {
+    "bytes": 366396,
+    "name": "portal_gate",
+    "tris": 26256
+  },
+  "ruins_hero": {
+    "bytes": 255224,
+    "name": "ruins_hero",
+    "tris": 22696
+  },
+  "server_rack": {
+    "bytes": 462584,
+    "name": "server_rack",
+    "tris": 57656
+  },
+  "star_core": {
+    "bytes": 354736,
+    "name": "star_core",
+    "tris": 23584
+  },
+  "tunnel_lines": {
+    "bytes": 420904,
+    "name": "tunnel_lines",
+    "tris": 57420
+  }
+}

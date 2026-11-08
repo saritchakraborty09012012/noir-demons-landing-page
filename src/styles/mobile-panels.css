@@ -1,0 +1,237 @@
+@media (max-width: 760px) {
+  /* decision table */
+  .table-wrap {
+    width: 92vw;
+    max-height: calc(100dvh - var(--header-h) - var(--bar) - 96px);
+    top: 52%;
+    padding: 14px;
+  }
+  .table-scroll {
+    max-height: calc(100dvh - var(--header-h) - var(--bar) - 170px);
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  table.decision { min-width: 540px; font-size: 9px; }
+  table.decision th { font-size: 6.5px; }
+  table.decision td:first-child { font-size: 7.5px; }
+  .table-cue { display: block; }
+
+  /* plans */
+  .plans-hud {
+    width: 94vw;
+    bottom: calc(var(--bar) + 40px + var(--safe-b));
+    max-height: calc(100dvh - var(--header-h) - var(--bar) - 96px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .plan-toggle__inner { width: 100%; }
+  .plan-toggle button {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 44px;
+    padding: 9px 7px;
+    font-size: 6.5px;
+    line-height: 1.4;
+  }
+  .plan-tabs { gap: 4px; }
+  .plan-tabs button { min-height: 40px; padding: 7px 5px; font-size: 6.5px; }
+  .plan-body { gap: 12px; }
+  .plan-title h3 { font-size: 27px; }
+  .plan-features li { font-size: 9.5px; }
+  .plan-cta { min-height: 46px; }
+  .plan-blurb { display: none; }
+
+  /* outro */
+  .outro-actions {
+    left: max(var(--pad), var(--safe-l));
+    right: max(var(--pad), var(--safe-r));
+    bottom: calc(var(--bar) + 22vh);
+    transform: none;
+  }
+  .outro-actions .btn { width: 100%; min-height: 48px; }
+  .outro-foot {
+    left: max(var(--pad), var(--safe-l));
+    right: max(var(--pad), var(--safe-r));
+    bottom: calc(var(--bar) + 58px + var(--safe-b));
+    gap: 10px;
+  }
+  .outro-foot__brand img { width: 28px; height: 28px; }
+  .outro-foot__replay { min-height: 40px; }
+}
+
+/* ============ SHORT PORTRAIT PHONES ============ */
+@media (max-width: 760px) and (max-height: 620px) {
+  :root { --panel-bottom: calc(var(--bar) + 100px); }
+  .lede { font-size: 12.5px; line-height: 1.55; }
+  .hero-panel .eyebrow { margin-bottom: 10px; }
+  .hero-actions .btn { min-height: 42px; }
+  .table-wrap { max-height: calc(100dvh - var(--header-h) - var(--bar) - 72px); }
+  .table-scroll { max-height: calc(100dvh - var(--header-h) - var(--bar) - 146px); }
+}
+
+/* ============ PHONES (LANDSCAPE) ============ */
+@media (max-width: 1000px) and (max-height: 560px) {
+  :root { --header-h: 46px; }
+
+  .header { height: 46px; }
+  .header__cta, .hud-btn { display: none; }
+  .brand__logo { width: 34px; height: 34px; }
+  .brand__sub { display: none; }
+  .hud-menu-btn { width: 44px; height: 44px; padding: 0; align-items: center; justify-content: center; }
+
+  /* compact vertical rail keeps the bottom clear for the footer */
+  .rail {
+    left: max(4px, var(--safe-l));
+    top: 50%;
+    bottom: auto;
+    flex-direction: column;
+    transform: translateY(-50%);
+  }
+  .rail__line {
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+  .rail button {
+    width: 44px;
+    height: clamp(18px, 5vh, 26px);
+    padding-left: 13px;
+    justify-content: flex-start;
+  }
+  .rail button::before { left: 2px; top: 50%; transform: translateY(-50%); }
+  .rail button span { display: none; }
+
+  .hud-clock { right: max(12px, var(--safe-r)); bottom: calc(var(--bar) + 10px + var(--safe-b)); }
+  .scroll-hint {
+    top: calc(var(--bar) + var(--header-h) + 6px + var(--safe-t));
+    bottom: auto;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .scroll-hint__bubble { width: 34px; height: 34px; }
+  .scroll-hint__arrow { width: 8px; height: 8px; }
+  .scroll-hint__label { font-size: 6px; }
+
+  .hero-panel,
+  .premise-panel,
+  .vision-panel {
+    left: max(var(--pad), var(--safe-l));
+    right: auto;
+    width: min(520px, 58vw);
+    bottom: calc(var(--bar) + 54px);
+  }
+  .hero-panel .lede,
+  .premise-panel .lede,
+  .vision-panel .lede { font-size: 12px; line-height: 1.5; }
+  .hero-panel .micro { display: none; }
+  .hero-actions .btn { min-height: 40px; }
+
+  .impact-panel { left: max(var(--pad), var(--safe-l)); bottom: calc(var(--bar) + 54px); }
+
+  .constellation-intro {
+    left: max(var(--pad), var(--safe-l));
+    top: calc(var(--bar) + var(--header-h) + 8px);
+    width: min(380px, 42vw);
+  }
+  .constellation-intro .lede { display: none; }
+  .product-card {
+    right: max(var(--pad), var(--safe-r));
+    bottom: calc(var(--bar) + 54px);
+    width: min(360px, 52vw);
+    padding: 14px;
+    background: linear-gradient(150deg, rgba(10, 11, 16, 0.94), rgba(5, 6, 9, 0.84));
+  }
+  .product-card p { display: none; }
+  .product-card h3 { font-size: 22px; }
+  .product-card__foot { flex-wrap: wrap; }
+  .product-strip button { width: 18px; }
+
+  .engine-copy {
+    left: max(var(--pad), var(--safe-l));
+    top: calc(var(--bar) + var(--header-h) + 8px);
+    width: min(380px, 42vw);
+  }
+  .engine-copy .lede { display: none; }
+  .engine-stages {
+    left: max(var(--pad), var(--safe-l));
+    bottom: calc(var(--bar) + 54px);
+    width: min(360px, 40vw);
+  }
+  .engine-stage { padding: 5px 0; }
+  .engine-stage small { display: none; }
+
+  .choice-card {
+    left: 50%;
+    right: auto;
+    top: calc(var(--bar) + var(--header-h) + 8px);
+    bottom: calc(var(--bar) + 42px);
+    width: min(460px, 86vw);
+    padding: 14px;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: linear-gradient(160deg, rgba(8, 10, 14, 0.97), rgba(4, 5, 8, 0.92));
+  }
+  .choice-card.is-build,
+  .choice-card.is-managed { left: 50%; right: auto; }
+  .choice-card ul { grid-template-columns: 1fr 1fr; gap: 5px 12px; margin: 10px 0; }
+  .choice-card p { display: none; }
+  .choice-card .btn { min-height: 42px; }
+
+  .table-wrap { top: 54%; max-height: 60vh; }
+  .table-scroll { max-height: calc(60vh - 78px); }
+
+  .plans-hud {
+    width: 94vw;
+    bottom: calc(var(--bar) + 40px);
+    max-height: calc(100dvh - var(--header-h) - var(--bar) - 70px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .plan-toggle { margin-bottom: 6px; }
+  .plan-toggle button { min-height: 38px; padding: 7px 10px; font-size: 6.5px; }
+  .plan-detail { padding: 10px 12px; }
+  .plan-tabs { margin-bottom: 8px; }
+  .plan-tabs button { min-height: 30px; padding: 4px 6px; font-size: 6px; }
+  .plan-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "title cta" "features features";
+    gap: 8px 14px;
+    align-items: end;
+  }
+  .plan-title {
+    grid-area: title;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 14px;
+  }
+  .plan-title .micro { display: none; }
+  .plan-title h3 { font-size: 24px; }
+  .plan-price { margin-top: 0; font-size: 10px; }
+  .plan-desc { display: none; }
+  .plan-features { grid-area: features; columns: 3; column-gap: 14px; }
+  .plan-features li { font-size: 8.5px; padding-bottom: 3px; }
+  .plan-cta { grid-area: cta; min-width: 118px; min-height: 38px; padding: 8px 10px; }
+  .plan-blurb { display: none; }
+
+  .outro-actions {
+    left: 50%;
+    right: auto;
+    bottom: calc(var(--bar) + 126px);
+    transform: translateX(-50%);
+  }
+  .outro-actions .btn { min-height: 40px; }
+  .outro-foot {
+    display: flex;
+    justify-content: flex-end;
+    bottom: calc(var(--bar) + 60px);
+  }
+  .outro-foot__brand { display: none; }
+}
+

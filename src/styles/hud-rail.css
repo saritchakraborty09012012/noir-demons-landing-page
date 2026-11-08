@@ -1,0 +1,257 @@
+/* ---------- rail, HUD and scene clock ---------- */
+/* ============ RAIL / HUD ============ */
+.rail {
+  position: fixed;
+  left: 18px;
+  top: 50%;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.8s 0.5s;
+}
+.is-booted .rail { opacity: 1; }
+.rail__line {
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: var(--line);
+}
+.rail button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 31px;
+  padding-left: 16px;
+  text-align: left;
+}
+.rail button::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--bone-dim);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--ink);
+  transition: 0.3s var(--ease);
+}
+.rail button span {
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.14em;
+  color: #615c52;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: 0.3s var(--ease);
+  white-space: nowrap;
+}
+.rail button:hover span,
+.rail button.is-active span {
+  opacity: 1;
+  transform: none;
+}
+.rail button.is-active {
+  color: var(--bone);
+}
+.rail button.is-active::before {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(201, 162, 75, 0.8);
+}
+.rail button.is-active span {
+  color: var(--gold-hi);
+}
+
+.corners {
+  position: fixed;
+  inset: 22px;
+  z-index: 45;
+  pointer-events: none;
+  opacity: 0.55;
+}
+.corners i {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line);
+}
+.corners i:nth-child(1) { left: 0; top: 0; border-right: 0; border-bottom: 0; }
+.corners i:nth-child(2) { right: 0; top: 0; border-left: 0; border-bottom: 0; }
+.corners i:nth-child(3) { left: 0; bottom: 0; border-right: 0; border-top: 0; }
+.corners i:nth-child(4) { right: 0; bottom: 0; border-left: 0; border-top: 0; }
+
+.hud-clock {
+  position: fixed;
+  right: var(--pad);
+  bottom: calc(var(--bar) + 24px);
+  z-index: 55;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.8s 0.6s;
+}
+.is-booted .hud-clock { opacity: 1; }
+.hud-clock__rec {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: var(--bone-dim);
+}
+.hud-clock__rec i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff5b48;
+  box-shadow: 0 0 10px rgba(255, 91, 72, 0.9);
+  animation: recPulse 1.6s infinite;
+}
+@keyframes recPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.hud-clock__time {
+  font-family: var(--mono);
+  font-size: clamp(13px, 1.1vw, 18px);
+  letter-spacing: 0.12em;
+  color: var(--bone);
+  font-variant-numeric: tabular-nums;
+}
+.hud-clock__meta {
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.hud-progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--bar) * 0.72);
+  z-index: 55;
+  height: 1px;
+  background: rgba(236, 231, 221, 0.1);
+}
+.hud-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-hi));
+  box-shadow: 0 0 12px rgba(201, 162, 75, 0.6);
+}
+
+.scroll-hint {
+  position: fixed;
+  left: 50%;
+  bottom: calc(var(--bar) + 20px + env(safe-area-inset-bottom, 0px));
+  z-index: 56;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding: 0;
+  transform: translateX(-50%);
+  color: var(--bone-dim);
+  pointer-events: auto;
+  transition: opacity 0.5s var(--ease), visibility 0.5s;
+}
+.scroll-hint__bubble {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 75, 0.52);
+  background:
+    radial-gradient(circle at 50% 34%, rgba(243, 221, 160, 0.18), transparent 62%),
+    rgba(8, 8, 9, 0.42);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.55),
+    inset 0 0 22px rgba(201, 162, 75, 0.12);
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease), transform 0.35s var(--ease);
+}
+.scroll-hint__bubble::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 75, 0.42);
+  animation: hintPulse 2.6s var(--ease) infinite;
+}
+.scroll-hint__arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid var(--gold-hi);
+  border-bottom: 1px solid var(--gold-hi);
+  transform: rotate(45deg) translate(-2px, -2px);
+  animation: hintArrow 1.9s var(--ease) infinite;
+}
+.scroll-hint__label {
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.28em;
+  text-indent: 0.28em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  white-space: nowrap;
+}
+.scroll-hint:hover .scroll-hint__bubble,
+.scroll-hint:focus-visible .scroll-hint__bubble {
+  border-color: var(--gold-hi);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.6),
+    0 0 28px rgba(201, 162, 75, 0.22),
+    inset 0 0 26px rgba(201, 162, 75, 0.2);
+  transform: translateY(2px);
+}
+.scroll-hint.is-gone {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@keyframes hintPulse {
+  0% { transform: scale(1); opacity: 0.55; }
+  70% { transform: scale(1.38); opacity: 0; }
+  100% { transform: scale(1.38); opacity: 0; }
+}
+@keyframes hintArrow {
+  0%, 100% { transform: rotate(45deg) translate(-2px, -2px); opacity: 0.5; }
+  50% { transform: rotate(45deg) translate(2px, 2px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint__bubble::before,
+  .scroll-hint__arrow { animation: none; }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1100px) {
+  .header__nav { display: none; }
+  .hud-menu-btn { display: flex; }
+}
+@media (max-width: 760px) {
+  :root { --header-h: 60px; }
+  .header { grid-template-columns: 1fr auto; height: 56px; }
+  .header__cta { display: none; }
+  .hud-btn { display: none; }
+  .rail { left: 8px; }
+  .rail button { height: 27px; padding-left: 13px; }
+  .rail button span { display: none; }
+  .hud-clock { right: 14px; bottom: calc(var(--bar) + 14px); }
+  .hud-clock__meta { display: none; }
+  .corners { inset: 10px; opacity: 0.35; }
+  .scroll-hint { bottom: calc(var(--bar) + 18px); }
+}

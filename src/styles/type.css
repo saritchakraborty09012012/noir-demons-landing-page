@@ -1,0 +1,66 @@
+/* ---------- shared type, lede and buttons ---------- */
+.lede {
+  max-width: 44ch;
+  margin: 0;
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.75;
+  color: #c6c0b4;
+}
+
+.serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.gold {
+  color: var(--gold-hi);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(236, 231, 221, 0.24);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bone);
+  background: rgba(5, 5, 5, 0.25);
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+.btn i {
+  font-style: normal;
+  font-size: 12px;
+  transition: transform 0.3s var(--ease);
+}
+.btn:hover {
+  border-color: var(--gold);
+  background: rgba(201, 162, 75, 0.12);
+  color: var(--gold-hi);
+}
+.btn:hover i {
+  transform: translate(2px, -2px);
+}
+.btn--gold {
+  border-color: var(--gold);
+  color: var(--gold-hi);
+}
+.btn--gold:hover {
+  background: var(--gold);
+  color: #080705;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain, .flash::after { animation: none; }
+}

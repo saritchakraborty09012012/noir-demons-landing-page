@@ -1,0 +1,13 @@
+{
+  "name": "NDE: NoirDemons — Make the Impossible Useful",
+  "short_name": "NDE: NoirDemons",
+  "description": "NDE: NoirDemons, formerly Novexa — an independent intelligence studio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    { "src": "/images/noirdemons.webp", "sizes": "any", "type": "image/webp", "purpose": "any" },
+    { "src": "/images/noirdemons.png", "sizes": "any", "type": "image/png", "purpose": "any" }
+  ]
+}
