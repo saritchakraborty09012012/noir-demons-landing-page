@@ -23,7 +23,7 @@ export default function SeoCopy() {
         more meaningful outcomes.
       </p>
 
-      <h2>Ten ways to move forward.</h2>
+      <h2>Twelve ways to move forward.</h2>
       <p>
         One studio. An expanding constellation of products designed to make difficult things feel
         possible.

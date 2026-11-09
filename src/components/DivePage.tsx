@@ -19,9 +19,9 @@ const GROUPS: Array<{ id: string; title: string; sub: string; names: string[]; n
   {
     id: "dive-3d",
     title: "Our 3D Service Samples",
-    sub: "SERVICE / 01–06",
+    sub: "SERVICE / 01–07",
     note: "None of the products below belong to any original existing brand, nor are they sold or any brand's property — NDE (NoirDemons) is solely responsible for the development, maintenance, copyright and ownership of these samples. All names shown are fictional and any resemblance to real brands, products or persons is purely coincidental; trademarks belong to their respective owners. Samples are rendered for demonstration of NDE's capabilities only.",
-    names: ["Woodcrest Co.", "Oakhaven Home", "Aether Studio", "KOKO Coconut Co.", "Aven Serum", "Asterion Builders"],
+    names: ["The Legendary Arc Reactor", "Woodcrest Co.", "Oakhaven Home", "Aether Studio", "KOKO Coconut Co.", "Aven Serum", "Asterion Builders"],
   },
   {
     id: "dive-2d",
@@ -89,9 +89,9 @@ export default function DivePage() {
 
         <main className="dive__main">
           <section className="dive__hero" id="dive-hero">
-            <p className="dive__eyebrow">PRODUCTS &amp; SAMPLES / 011</p>
+            <p className="dive__eyebrow">PRODUCTS &amp; SAMPLES / 012</p>
             <h1>
-              Ten ways to <em>move forward.</em>
+              Twelve ways to <em>move forward.</em>
             </h1>
             <p className="dive__lede">
               One studio. An expanding constellation of products designed to make difficult things feel

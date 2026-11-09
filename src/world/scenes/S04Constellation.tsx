@@ -217,7 +217,7 @@ export default function S04Constellation() {
           maxWidth={34}
           anchorX="center"
           lines={[
-            { text: "Ten ways", size: 1.25, italic: true, y: 0.95, letterSpacing: 0 },
+            { text: "Twelve ways", size: 1.25, italic: true, y: 0.95, letterSpacing: 0 },
             { text: "to move forward.", size: 2.05, italic: true, y: -1.35, color: "#EBCB82" },
           ]}
         />

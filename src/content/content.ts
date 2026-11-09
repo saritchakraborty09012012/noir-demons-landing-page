@@ -236,7 +236,7 @@ export const DECISION_ROWS: [string, string, string][] = [
 
 /*
  * Numbering restarts inside every group, site-wide:
- *   Top public products 01–04 · 3D service samples 01–06 · 2D site services 01.
+ *   Top public products 01–04 · 3D service samples 01–07 · 2D site services 01.
  * The array order is the arrangement order (it drives the film orbit, the dive
  * grids and the agent list), so pitches below stay index-aligned.
  */
@@ -252,12 +252,13 @@ export const PRODUCTS: Array<{
   { no: "02", name: "Novexa", category: "Idea Platforms", color: "#B7A6FF", url: "#", shot: ["/shots/product-01-novexa-1.jpg", "/shots/product-01-novexa-2.jpg"] },
   { no: "03", name: "BlitzData", category: "Data & Analytics", color: "#6EF2FF", url: "#", shot: ["/shots/product-03-blitzdata.jpg"] },
   { no: "04", name: "EconoMind AI", category: "Economic Intelligence", color: "#74C7FF", url: "#", shot: ["/shots/product-02-economind.jpg"] },
-  { no: "01", name: "Woodcrest Co.", category: "Commerce & Craft", color: "#D7A55A", url: "#", shot: ["/shots/product-05-woodcrest.jpg"] },
-  { no: "02", name: "Oakhaven Home", category: "Interiors & Living", color: "#F1E3CB", url: "#", shot: ["/shots/product-07-oakhaven.jpg"] },
-  { no: "03", name: "Aether Studio", category: "Web Experiences", color: "#9FD8FF", url: "https://aether-studio-nde.vercel.app/", shot: ["/shots/product-08-aether.jpg"] },
-  { no: "04", name: "KOKO Coconut Co.", category: "Food & Beverage", color: "#DDF6C8", url: "https://koko-coconut-co-nde.vercel.app/", shot: ["/shots/product-09-koko.jpg"] },
-  { no: "05", name: "Aven Serum", category: "Beauty & Skin", color: "#FFB1C4", url: "https://aven-serum-nde.vercel.app/", shot: ["/shots/product-10-aven.jpg"] },
-  { no: "06", name: "Asterion Builders", category: "Real Estate & Construction", color: "#A3B87C", url: "https://asterion-builders-nde.vercel.app/", shot: ["/shots/product-11-asterion.jpg"] },
+  { no: "01", name: "The Legendary Arc Reactor", category: "Interactive 3D Experiences", color: "#4DD8FF", url: "https://the-lgenedary-arc-reactor-nde.vercel.app/", shot: ["/shots/product-12-arc-reactor.jpg"] },
+  { no: "02", name: "Woodcrest Co.", category: "Commerce & Craft", color: "#D7A55A", url: "#", shot: ["/shots/product-05-woodcrest.jpg"] },
+  { no: "03", name: "Oakhaven Home", category: "Interiors & Living", color: "#F1E3CB", url: "#", shot: ["/shots/product-07-oakhaven.jpg"] },
+  { no: "04", name: "Aether Studio", category: "Web Experiences", color: "#9FD8FF", url: "https://aether-studio-nde.vercel.app/", shot: ["/shots/product-08-aether.jpg"] },
+  { no: "05", name: "KOKO Coconut Co.", category: "Food & Beverage", color: "#DDF6C8", url: "https://koko-coconut-co-nde.vercel.app/", shot: ["/shots/product-09-koko.jpg"] },
+  { no: "06", name: "Aven Serum", category: "Beauty & Skin", color: "#FFB1C4", url: "https://aven-serum-nde.vercel.app/", shot: ["/shots/product-10-aven.jpg"] },
+  { no: "07", name: "Asterion Builders", category: "Real Estate & Construction", color: "#A3B87C", url: "https://asterion-builders-nde.vercel.app/", shot: ["/shots/product-11-asterion.jpg"] },
   { no: "01", name: "GlossDrive Co.", category: "Automotive Care", color: "#D8DEE8", url: "#", shot: ["/shots/product-06-glossdrive.jpg"] },
 ];
 
@@ -266,6 +267,7 @@ export const PRODUCT_PITCH = [
   "Where raw ideas become testable — before the world gets a vote.",
   "Raw data, turned into a clear and defensible line of sight.",
   "Macro signals, decoded into decisions a human can actually make.",
+  "A miniature fusion reactor, taken apart and rebuilt for the scroll.",
   "Considered goods, quietly sold. Commerce with its voice down.",
   "Spaces that feel inevitable — and the systems that keep them that way.",
   "Websites that behave like worlds, not brochures.",
