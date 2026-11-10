@@ -277,6 +277,109 @@ export const PRODUCT_PITCH = [
   "A showroom shine, engineered as a repeatable digital service.",
 ];
 
+export type Template = {
+  no: string;
+  name: string;
+  category: string;
+  pitch: string;
+  video: string;
+  poster: string;
+};
+
+/*
+ * Motion catalogue shown below the 2D site services on the dive page.
+ * Every entry carries its own clip so the "reference" button can attach that
+ * exact build to the enquiry email.
+ */
+export const TEMPLATES: Template[] = [
+  {
+    no: "01",
+    name: "Residence 81804",
+    category: "3D Real Estate",
+    pitch: "A 142.55 m² apartment you can walk through — rooms, blueprint and price in one scroll.",
+    video: "/templates/template-01.mp4",
+    poster: "/templates/posters/template-01.jpg",
+  },
+  {
+    no: "02",
+    name: "Undine Bakehouse",
+    category: "Artisan Bakery",
+    pitch: "Cardamom buns and olive-oil cake, sold by atmosphere instead of a menu grid.",
+    video: "/templates/template-02.mp4",
+    poster: "/templates/posters/template-02.jpg",
+  },
+  {
+    no: "03",
+    name: "Open Water",
+    category: "Yacht Charter",
+    pitch: "A charter fleet presented like a private club, not a list of boats.",
+    video: "/templates/template-03.mp4",
+    poster: "/templates/posters/template-03.jpg",
+  },
+  {
+    no: "04",
+    name: "REV Productions",
+    category: "3D Film & Motion",
+    pitch: "Packages, showreel and a 3D scene that makes the studio feel bigger than it is.",
+    video: "/templates/template-04.mp4",
+    poster: "/templates/posters/template-04.jpg",
+  },
+  {
+    no: "05",
+    name: "True Climate",
+    category: "Home Comfort",
+    pitch: "Ductless mini-splits explained by room, by season and by fit — not by spec sheet.",
+    video: "/templates/template-05.mp4",
+    poster: "/templates/posters/template-05.jpg",
+  },
+  {
+    no: "06",
+    name: "Crema Club",
+    category: "Gelato & Dessert",
+    pitch: "Scroll into the scoop: pistachio crunch, cocoa and a flavour system built for craving.",
+    video: "/templates/template-06.mp4",
+    poster: "/templates/posters/template-06.jpg",
+  },
+  {
+    no: "07",
+    name: "Hotspots Realty",
+    category: "Property Discovery",
+    pitch: "Neighbourhoods, listings and investment zones mapped into one calm portal.",
+    video: "/templates/template-07.mp4",
+    poster: "/templates/posters/template-07.jpg",
+  },
+  {
+    no: "08",
+    name: "Crossroads",
+    category: "Energy & Industrial",
+    pitch: "Design at the crossroads of energy and evolution — heavy industry, told light.",
+    video: "/templates/template-08.mp4",
+    poster: "/templates/posters/template-08.jpg",
+  },
+];
+
+/**
+ * Contact-email link that carries one template into the message as a reference,
+ * the way quoting text attaches a passage to a prompt.
+ */
+export const referenceMail = (name: string, video: string) => {
+  const origin = typeof window === "undefined" ? "" : window.location.origin;
+  const url = `${origin}${video}`;
+  const subject = `Reference — ${name} | NDE NoirDemons`;
+  const body = [
+    "Hello NDE (NoirDemons) team,",
+    "",
+    "I'd like to build something in the direction of this reference:",
+    "",
+    `REFERENCE: ${name}`,
+    `VIDEO: ${url}`,
+    "",
+    "What I have in mind:",
+    "",
+  ].join("\n");
+  return `${MAILTO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 export const NAV = [
   { label: "Ecosystem", p: 0.32, no: "01" },
   { label: "Services", p: 0.50, no: "02" },

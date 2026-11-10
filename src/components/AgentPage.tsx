@@ -1,4 +1,13 @@
-import { EMAIL, MAILTO, PRODUCTS, PRODUCT_PITCH, PLAN_GROUPS, DECISION_HEAD, DECISION_ROWS } from "../content/content";
+import {
+  EMAIL,
+  MAILTO,
+  PRODUCTS,
+  PRODUCT_PITCH,
+  TEMPLATES,
+  PLAN_GROUPS,
+  DECISION_HEAD,
+  DECISION_ROWS,
+} from "../content/content";
 import { POLICIES } from "../lib/policies";
 
 /**
@@ -54,6 +63,24 @@ export default function AgentPage() {
                 {p.no} {p.name}
               </strong>{" "}
               ({p.category}) — {PRODUCT_PITCH[i]}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section aria-label="Template catalogue">
+        <h2>The Proof Reel — template catalogue</h2>
+        <p>
+          Eight site builds, each filmed end to end. Every entry can be attached to an enquiry email
+          as a reference from the human version.
+        </p>
+        <ul>
+          {TEMPLATES.map((t) => (
+            <li key={t.no}>
+              <strong>
+                {t.no} {t.name}
+              </strong>{" "}
+              ({t.category}) — {t.pitch} <a href={t.video}>Watch the walkthrough.</a>
             </li>
           ))}
         </ul>

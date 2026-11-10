@@ -1,5 +1,13 @@
 import { useEffect, useRef } from "react";
-import { CONTACT_MAILTO, EMAIL, MAILTO, PRODUCTS, PRODUCT_PITCH } from "../content/content";
+import {
+  CONTACT_MAILTO,
+  EMAIL,
+  MAILTO,
+  PRODUCTS,
+  PRODUCT_PITCH,
+  TEMPLATES,
+  referenceMail,
+} from "../content/content";
 import { useReel } from "../store/useReel";
 import { jumpTo } from "../lib/scroll";
 import { POLICIES } from "../lib/policies";
@@ -36,6 +44,7 @@ const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavio
 const NAV: Array<[string, string]> = [
   ["Ecosystem", "dive-hero"],
   ["Services", "dive-compare"],
+  ["Templates", "dive-templates"],
   ["Plans", "dive-plans"],
   ["Achievement", "dive-growth"],
   ["Contact", "dive-contact"],
@@ -132,6 +141,52 @@ export default function DivePage() {
               </div>
             </section>
           ))}
+
+          <section className="dive__section" id="dive-templates">
+            <div className="dive__section-head">
+              <h2>
+                The Proof <em>Reel</em>
+              </h2>
+              <span>TEMPLATES / 01–08</span>
+            </div>
+            <p className="dive__lede dive__lede--wrap">
+              Eight builds, filmed end to end. Pick one, hit reference, and it opens your enquiry
+              email with the clip already attached.
+            </p>
+            <div className="dive__reels">
+              {TEMPLATES.map((item) => (
+                <article className="dive__reel" key={item.no}>
+                  <div className="dive__reel-video">
+                    <video
+                      src={item.video}
+                      poster={item.poster}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      aria-label={`${item.name} template walkthrough`}
+                    />
+                    <span className="dive__reel-no" aria-hidden="true">
+                      {item.no}
+                    </span>
+                  </div>
+                  <div className="dive__reel-body">
+                    <div className="dive__sample-meta">
+                      <b>{item.name}</b>
+                      <i>{item.category}</i>
+                    </div>
+                    <p className="dive__sample-desc">{item.pitch}</p>
+                    <a
+                      className="dive__ref"
+                      href={referenceMail(item.name, item.video)}
+                      aria-label={`Reference ${item.name} in an enquiry email`}
+                    >
+                      <span aria-hidden="true">“</span> Reference this <i>↗</i>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
 
           <SolveGraph />
 

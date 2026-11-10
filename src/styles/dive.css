@@ -66,6 +66,22 @@
 .dive__sample-meta b { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 16px; }
 .dive__sample-meta i { font-family: "JetBrains Mono", monospace; font-style: normal; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8b88; }
 .dive__sample-desc { margin: 0; padding: 0 14px 14px; font-size: 12.5px; line-height: 1.6; color: #b4b4b0; }
+
+/* The Proof Reel — portrait template walkthroughs with reference-to-email buttons */
+.dive__lede--wrap { white-space: normal; max-width: 620px; margin-bottom: 26px; }
+.dive__reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.dive__reel { display: flex; flex-direction: column; border: 1px solid rgba(244, 244, 242, 0.1); background: rgba(17, 17, 17, 0.62); }
+.dive__reel:hover { border-color: rgba(244, 244, 242, 0.32); }
+.dive__reel-video { position: relative; background: #0a0a0a; }
+.dive__reel-video video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #0a0a0a; }
+.dive__reel-no { position: absolute; top: 10px; left: 10px; padding: 3px 7px; font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.16em; color: #f4f4f2; background: rgba(5, 5, 5, 0.72); border: 1px solid rgba(244, 244, 242, 0.28); pointer-events: none; }
+.dive__reel-body { display: flex; flex-direction: column; flex: 1; }
+.dive__reel-body .dive__sample-meta { padding-bottom: 8px; }
+.dive__reel-body .dive__sample-desc { padding-bottom: 14px; flex: 1; }
+.dive__ref { display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 11px 14px; border-top: 1px solid rgba(244, 244, 242, 0.14); font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #8b8b88; }
+.dive__ref span { font-family: Georgia, "Times New Roman", serif; font-size: 15px; letter-spacing: 0; line-height: 0; }
+.dive__ref i { font-style: normal; margin-left: auto; }
+.dive__ref:hover { background: #f4f4f2; border-color: #f4f4f2; color: #080808; }
 .dive__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(244, 244, 242, 0.18); }
 .dive__foot > a { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: clamp(18px, 2.4vw, 26px); }
 .dive__foot > a:hover { text-decoration: underline; }
@@ -208,4 +224,10 @@
   .cmp__table { font-size: 11px; }
   .cmp__table th, .cmp__table td { padding: 8px 7px; }
   .cmp__table tbody th { width: 18%; }
+  /* Proof Reel: two portraits per row, denser captions */
+  .dive__reels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .dive__reel-body .dive__sample-meta { flex-direction: column; gap: 2px; padding: 10px 10px 6px; }
+  .dive__reel-body .dive__sample-meta b { font-size: 14px; }
+  .dive__reel-body .dive__sample-desc { padding: 0 10px 12px; font-size: 11px; }
+  .dive__ref { padding: 9px 10px; font-size: 8px; letter-spacing: 0.12em; }
 }

@@ -6,6 +6,7 @@ import {
   PLAN_GROUPS,
   PRODUCTS,
   PRODUCT_PITCH,
+  TEMPLATES,
 } from "../content/content";
 
 export default function SeoCopy() {
@@ -38,6 +39,20 @@ export default function SeoCopy() {
                 <a href={product.url}>Visit {product.name}.</a>
               </>
             ) : null}
+          </li>
+        ))}
+      </ul>
+
+      <h2>The Proof Reel — eight site templates on film.</h2>
+      <p>
+        Eight builds, filmed end to end. Pick one, use its reference button, and it opens the
+        enquiry email with that clip already attached.
+      </p>
+      <ul>
+        {TEMPLATES.map((template) => (
+          <li key={template.no}>
+            {template.no} {template.name} — {template.category}. {template.pitch}{" "}
+            <a href={template.video}>Watch the walkthrough.</a>
           </li>
         ))}
       </ul>
