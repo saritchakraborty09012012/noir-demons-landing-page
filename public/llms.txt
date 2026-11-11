@@ -9,18 +9,32 @@ nde.noirdemons@atomicmail.io
 ## Products (Top Public)
 - Solve NCERT — Learning Systems. NCERT solutions for CBSE Class 9, fully AI-powered
   and human-verified, grown organically with zero promotion in 3 months.
-  Search Console: 478 clicks, 5.06K impressions, 9.4% CTR, position 8.4.
+  Search Console: 490 clicks, 5.43K impressions, 9% CTR, position 8.4.
 - Novexa — Idea Platforms. Where raw ideas become testable before the world gets a vote.
 - BlitzData — Data & Analytics. Raw data turned into a clear, defensible line of sight.
 - EconoMind AI — Economic Intelligence. Macro signals decoded into decisions.
 
 ## Samples (3D services)
+- The Legendary Arc Reactor — Interactive 3D Experiences. A miniature fusion
+  reactor, taken apart and rebuilt for the scroll.
 - Woodcrest Co. — Commerce & Craft. Considered goods, quietly sold.
 - Oakhaven Home — Interiors & Living. Spaces that feel inevitable.
 - Aether Studio — Web Experiences. Websites that behave like worlds, not brochures.
 - KOKO Coconut Co. — Food & Beverage. Hydration the way the tree intended.
 - Aven Serum — Beauty & Skin. A formula you can feel working.
 - Asterion Builders — Real Estate & Construction. A skyline in the making.
+
+## Templates (The Proof Reel)
+Eight site builds, filmed end to end; each can be attached to an enquiry email
+as a reference from the human version.
+- Residence 81804 — 3D Real Estate.
+- Undine Bakehouse — Artisan Bakery.
+- Open Water — Yacht Charter.
+- REV Productions — 3D Film & Motion.
+- True Climate — Home Comfort.
+- Crema Club — Gelato & Dessert.
+- Hotspots Realty — Property Discovery.
+- Crossroads — Energy & Industrial.
 
 ## Plans — buy the source code (one-time)
 - Starter: ₹10,000/- — full handover, business website/landing system, forms,

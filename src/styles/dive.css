@@ -111,12 +111,13 @@
 .gsc__head span { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.18em; color: #5f6368; }
 .gsc__kpis { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 .gsc__kpi { padding: 14px; border-right: 1px solid rgba(0, 0, 0, 0.1); color: #5f6368; }
-.gsc__kpi--mark { outline: 2px solid #d93025; outline-offset: -2px; }
 .gsc__kpi span { display: block; font-size: 12px; margin-bottom: 8px; }
 .gsc__kpi span i { font-style: normal; margin-right: 6px; }
 .gsc__kpi b { font-size: 30px; font-weight: 400; color: #202124; }
 .gsc__kpi--on { background: #1a73e8; color: #fff; }
 .gsc__kpi--on b { color: #fff; }
+.gsc__kpi--imp { background: #8430ce; color: #fff; }
+.gsc__kpi--imp b { color: #fff; }
 .gsc__range { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); border: 1px solid rgba(0, 0, 0, 0.25); padding: 8px 14px; font-size: 12px; color: #202124; background: #fff; }
 .gsc__chart { position: relative; padding: 26px 10px 0; }
 .gsc__axis-label { position: absolute; top: 2px; left: 10px; font-size: 12px; color: #5f6368; }

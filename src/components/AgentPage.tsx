@@ -90,7 +90,7 @@ export default function AgentPage() {
         <h2>Growth proof — Solve NCERT</h2>
         <p>
           Grown with zero promotion in 3 months: no advertisements, no social media, no promotion.
-          Search Console (27 Aug – 3 Nov): 478 total clicks, 5.06K total impressions, 9.4% average
+          Search Console (27 Aug – 5 Nov): 490 total clicks, 5.43K total impressions, 9% average
           CTR, average position 8.4. It spread by sharing with one struggling student; soon every
           Class 9 student in his school was using it.
         </p>
