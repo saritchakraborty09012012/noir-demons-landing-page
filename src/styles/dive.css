@@ -122,9 +122,16 @@
 .gsc__chart { position: relative; padding: 26px 10px 0; }
 .gsc__axis-label { position: absolute; top: 2px; left: 10px; font-size: 12px; color: #5f6368; }
 .gsc__axis-label--right { left: auto; right: 10px; }
-.gsc__chart svg { width: 100%; height: auto; display: block; transform-origin: center; animation: gscBreathe 7s ease-in-out infinite; }
+.gsc__chart svg { width: 100%; height: auto; display: block; transform-origin: center; animation: gscBreathe 7s ease-in-out infinite; touch-action: pan-y; cursor: crosshair; }
 @keyframes gscBreathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.018); } }
 @media (prefers-reduced-motion: reduce) { .gsc__chart svg { animation: none; } }
+/* GSC-style day tooltip — hover on desktop, single tap on touch */
+.gsc__tip { position: absolute; top: 4px; z-index: 3; width: 240px; max-width: 74vw; background: #fff; border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 4px; box-shadow: 0 5px 16px rgba(0, 0, 0, 0.22); padding: 12px 14px; pointer-events: none; }
+.gsc__tip > b { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 400; color: #202124; }
+.gsc__tip-row { display: flex; align-items: center; gap: 9px; font-size: 13px; color: #5f6368; padding: 3px 0; }
+.gsc__tip-row i { flex: none; width: 15px; height: 3px; border-radius: 2px; }
+.gsc__tip-row b { margin-left: auto; font-weight: 400; color: #202124; }
+.gsc__tip p { margin: 10px 0 0; padding-top: 9px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-size: 12px; line-height: 1.55; color: #5f6368; }
 .gsc__story { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 14px; line-height: 1.65; color: #3c4043; max-width: none; }
 @media (max-width: 860px) {
   .gsc__kpis { grid-template-columns: 1fr 1fr; }
