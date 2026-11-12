@@ -24,7 +24,7 @@ export default function SeoCopy() {
         more meaningful outcomes.
       </p>
 
-      <h2>Twelve ways to move forward.</h2>
+      <h2>Thirteen ways to move forward.</h2>
       <p>
         One studio. An expanding constellation of products designed to make difficult things feel
         possible.
@@ -43,10 +43,10 @@ export default function SeoCopy() {
         ))}
       </ul>
 
-      <h2>The Proof Reel — eight site templates on film.</h2>
+      <h2>The Site Catalogue — eight site templates.</h2>
       <p>
-        Eight builds, filmed end to end. Pick one, use its reference button, and it opens the
-        enquiry email with that clip already attached.
+        Eight sites on one shelf, each catalogued as a full walkthrough. Pick any, use its reference
+        button, and it opens the enquiry email with that clip already attached.
       </p>
       <ul>
         {TEMPLATES.map((template) => (

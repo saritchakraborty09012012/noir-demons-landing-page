@@ -246,6 +246,7 @@
   :root { --header-h: 60px; }
   .header { grid-template-columns: 1fr auto; height: 56px; }
   .header__cta { display: none; }
+  .header__skip { display: none; }
   .hud-btn { display: none; }
   .rail { left: 8px; }
   .rail button { height: 27px; padding-left: 13px; }

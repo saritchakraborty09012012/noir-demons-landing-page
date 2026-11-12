@@ -67,7 +67,7 @@
 .dive__sample-meta i { font-family: "JetBrains Mono", monospace; font-style: normal; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8b88; }
 .dive__sample-desc { margin: 0; padding: 0 14px 14px; font-size: 12.5px; line-height: 1.6; color: #b4b4b0; }
 
-/* The Proof Reel — portrait template walkthroughs with reference-to-email buttons */
+/* The Site Catalogue — portrait template walkthroughs with reference-to-email buttons */
 .dive__lede--wrap { white-space: normal; max-width: 620px; margin-bottom: 26px; }
 .dive__reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
 .dive__reel { display: flex; flex-direction: column; border: 1px solid rgba(244, 244, 242, 0.1); background: rgba(17, 17, 17, 0.62); }
@@ -232,7 +232,7 @@
   .cmp__table { font-size: 11px; }
   .cmp__table th, .cmp__table td { padding: 8px 7px; }
   .cmp__table tbody th { width: 18%; }
-  /* Proof Reel: two portraits per row, denser captions */
+  /* Site Catalogue: two portraits per row, denser captions */
   .dive__reels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .dive__reel-body .dive__sample-meta { flex-direction: column; gap: 2px; padding: 10px 10px 6px; }
   .dive__reel-body .dive__sample-meta b { font-size: 14px; }

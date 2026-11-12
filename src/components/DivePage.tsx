@@ -34,8 +34,8 @@ const GROUPS: Array<{ id: string; title: string; sub: string; names: string[]; n
   {
     id: "dive-2d",
     title: "Our 2D Site Services",
-    sub: "SERVICE / 01",
-    names: ["GlossDrive Co."],
+    sub: "SERVICE / 01–02",
+    names: ["Kissa Retreat", "GlossDrive Co."],
   },
 ];
 
@@ -98,9 +98,9 @@ export default function DivePage() {
 
         <main className="dive__main">
           <section className="dive__hero" id="dive-hero">
-            <p className="dive__eyebrow">PRODUCTS &amp; SAMPLES / 012</p>
+            <p className="dive__eyebrow">PRODUCTS &amp; SAMPLES / 013</p>
             <h1>
-              Twelve ways to <em>move forward.</em>
+              Thirteen ways to <em>move forward.</em>
             </h1>
             <p className="dive__lede">
               One studio. An expanding constellation of products designed to make difficult things feel
@@ -145,13 +145,13 @@ export default function DivePage() {
           <section className="dive__section" id="dive-templates">
             <div className="dive__section-head">
               <h2>
-                The Proof <em>Reel</em>
+                The Site <em>Catalogue</em>
               </h2>
               <span>TEMPLATES / 01–08</span>
             </div>
             <p className="dive__lede dive__lede--wrap">
-              Eight builds, filmed end to end. Pick one, hit reference, and it opens your enquiry
-              email with the clip already attached.
+              Eight sites on one shelf, each catalogued as a full walkthrough. Pick any, hit
+              reference, and it opens your enquiry email with the clip already attached.
             </p>
             <div className="dive__reels">
               {TEMPLATES.map((item) => (

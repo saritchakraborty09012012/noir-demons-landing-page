@@ -34,6 +34,11 @@ export default function Header() {
     jumpTo(p, 1.6);
   };
 
+  const skipToContent = () => {
+    setMenu(false);
+    useReel.getState().openDive();
+  };
+
   return (
     <>
       <header className="header">
@@ -53,6 +58,9 @@ export default function Header() {
           ))}
         </nav>
         <div className="header__right">
+          <button className="header__skip" onClick={skipToContent} aria-label="Skip the film — open the content page directly">
+            Skip to content <i>↘</i>
+          </button>
           <button className="hud-btn" onClick={cycleQuality} aria-label={`Render quality: ${quality}. Change quality.`}>
             QUALITY <b>{quality}</b>
           </button>
@@ -94,6 +102,9 @@ export default function Header() {
               {item.label} <small>{item.no}</small>
             </button>
           ))}
+          <button onClick={skipToContent}>
+            Skip to content <small>DIVE ↘</small>
+          </button>
         </nav>
         <div className="menu__foot">
           <div className="menu__tools">

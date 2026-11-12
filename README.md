@@ -16,7 +16,7 @@ npm run preview    # serve the build locally
 After the outro, click **Dive deeper** (or scroll 3 times at the end, or open `/#/dive`):
 
 - Sample index — Top Public Products, 3D Service Samples (with disclaimer), 2D Site Services
-- The Proof Reel — eight filmed site templates (`public/templates`), each with a reference button that opens the enquiry email with that clip pre-attached
+- The Site Catalogue — eight site walkthroughs (`public/templates`), each with a reference button that opens the enquiry email with that clip pre-attached
 - Solve NCERT Search Console graph (coded SVG) + zero-promotion story
 - Comparative study — own the source code vs SaaS, 13 points + plan prices, ✓ bullets
 - Plans & pricing — side-by-side rate cards

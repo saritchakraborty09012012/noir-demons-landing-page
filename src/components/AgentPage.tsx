@@ -69,7 +69,7 @@ export default function AgentPage() {
       </section>
 
       <section aria-label="Template catalogue">
-        <h2>The Proof Reel — template catalogue</h2>
+        <h2>The Site Catalogue — eight template walkthroughs</h2>
         <p>
           Eight site builds, each filmed end to end. Every entry can be attached to an enquiry email
           as a reference from the human version.

@@ -236,7 +236,7 @@ export const DECISION_ROWS: [string, string, string][] = [
 
 /*
  * Numbering restarts inside every group, site-wide:
- *   Top public products 01–04 · 3D service samples 01–07 · 2D site services 01.
+ *   Top public products 01–04 · 3D service samples 01–07 · 2D site services 01–02.
  * The array order is the arrangement order (it drives the film orbit, the dive
  * grids and the agent list), so pitches below stay index-aligned.
  */
@@ -259,7 +259,8 @@ export const PRODUCTS: Array<{
   { no: "05", name: "KOKO Coconut Co.", category: "Food & Beverage", color: "#DDF6C8", url: "https://koko-coconut-co-nde.vercel.app/", shot: ["/shots/product-09-koko.jpg"] },
   { no: "06", name: "Aven Serum", category: "Beauty & Skin", color: "#FFB1C4", url: "https://aven-serum-nde.vercel.app/", shot: ["/shots/product-10-aven.jpg"] },
   { no: "07", name: "Asterion Builders", category: "Real Estate & Construction", color: "#A3B87C", url: "https://asterion-builders-nde.vercel.app/", shot: ["/shots/product-11-asterion.jpg"] },
-  { no: "01", name: "GlossDrive Co.", category: "Automotive Care", color: "#D8DEE8", url: "#", shot: ["/shots/product-06-glossdrive.jpg"] },
+  { no: "01", name: "Kissa Retreat", category: "Wellness & Retreats", color: "#9FCDBB", url: "#", shot: ["/shots/product-13-kissa.jpg"] },
+  { no: "02", name: "GlossDrive Co.", category: "Automotive Care", color: "#D8DEE8", url: "#", shot: ["/shots/product-06-glossdrive.jpg"] },
 ];
 
 export const PRODUCT_PITCH = [
@@ -274,6 +275,7 @@ export const PRODUCT_PITCH = [
   "Hydration the way the tree intended. Brand, commerce and sunshine.",
   "A formula you can feel working, presented with the drama it deserves.",
   "A skyline in the making — construction rendered as a world you can walk through.",
+  "A retreat told like a story — rooms, rituals and slow mornings in one scroll.",
   "A showroom shine, engineered as a repeatable digital service.",
 ];
 
