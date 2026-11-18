@@ -224,7 +224,6 @@ export default function SolveGraph() {
               Impressions
               <b>{IMPRESSIONS[tip.idx]}</b>
             </div>
-            <p>Right-click or use Ctrl + Enter to add an annotation</p>
           </div>
         ) : null}
       </div>

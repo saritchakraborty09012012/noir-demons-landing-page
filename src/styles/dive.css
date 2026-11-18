@@ -131,7 +131,6 @@
 .gsc__tip-row { display: flex; align-items: center; gap: 9px; font-size: 13px; color: #5f6368; padding: 3px 0; }
 .gsc__tip-row i { flex: none; width: 15px; height: 3px; border-radius: 2px; }
 .gsc__tip-row b { margin-left: auto; font-weight: 400; color: #202124; }
-.gsc__tip p { margin: 10px 0 0; padding-top: 9px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-size: 12px; line-height: 1.55; color: #5f6368; }
 .gsc__story { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 14px; line-height: 1.65; color: #3c4043; max-width: none; }
 @media (max-width: 860px) {
   .gsc__kpis { grid-template-columns: 1fr 1fr; }
