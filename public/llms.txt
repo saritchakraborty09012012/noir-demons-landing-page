@@ -9,7 +9,7 @@ nde.noirdemons@atomicmail.io
 ## Products (Top Public)
 - Solve NCERT — Learning Systems. NCERT solutions for CBSE Class 9, fully AI-powered
   and human-verified, grown organically with zero promotion in less than 3 months.
-  Search Console: 490 clicks, 5.43K impressions, 9% CTR, position 8.4.
+  Search Console: 532 clicks, 6.31K impressions, 8.4% CTR, position 8.6.
 - Novexa — Idea Platforms. Where raw ideas become testable before the world gets a vote.
 - BlitzData — Data & Analytics. Raw data turned into a clear, defensible line of sight.
 - EconoMind AI — Economic Intelligence. Macro signals decoded into decisions.
